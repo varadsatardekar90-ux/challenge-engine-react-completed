@@ -1,0 +1,6 @@
+{
+  "name": "nextjs-ai-review",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI review integration for Next.js App Router course"
+}

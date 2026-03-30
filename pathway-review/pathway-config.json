@@ -1,0 +1,41 @@
+{
+  "pathwayName": "Modern React Engineer",
+  "pathwayVersion": "1.0.0",
+  "courses": [
+    {
+      "id": "01-react-fundamentals",
+      "name": "React Fundamentals",
+      "weight": 0.33,
+      "required": true
+    },
+    {
+      "id": "02-redux-rtk-query",
+      "name": "Redux & RTK Query",
+      "weight": 0.33,
+      "required": true
+    },
+    {
+      "id": "03-nextjs-app-router",
+      "name": "Next.js App Router",
+      "weight": 0.34,
+      "required": true
+    }
+  ],
+  "badgeLevels": {
+    "bronze": {
+      "minScore": 60,
+      "minCompletion": 50
+    },
+    "silver": {
+      "minScore": 75,
+      "minCompletion": 75
+    }
+  },
+  "scoring": {
+    "functionalTests": 0.40,
+    "codeQuality": 0.25,
+    "architecture": 0.20,
+    "bestPractices": 0.10,
+    "aiReview": 0.05
+  }
+}
