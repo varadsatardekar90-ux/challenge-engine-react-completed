@@ -203,29 +203,6 @@
     }
   },
   {
-    "challengeId": "05-task-deletion",
-    "challengeName": "Task Deletion",
-    "aiReview": {
-      "challengeId": "05-task-deletion",
-      "timestamp": "2026-03-05T12:32:33.601Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The implementation of the delete functionality is clean and easy to understand."
-      ],
-      "improvements": [
-        "In the `TaskCard` component, the `handleDelete` function can be simplified by using the optional chaining operator (`?.`) to avoid the null check.",
-        "In the `App` component, the `handleDelete` function can be extracted into a separate function to make the code more modular and reusable.",
-        "The `onDelete` prop in the `TaskApp` component can be made optional by default, so that it doesn't break the component if it's not provided."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, with a good balance between simplicity and functionality. However, there are some minor improvements that can be made to make the code even more efficient and scalable."
-    }
-  },
-  {
     "challengeId": "11-useeffect-debounced-search",
     "challengeName": "useEffect - Debounced Search",
     "aiReview": {
@@ -515,6 +492,29 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and maintainable, but there are some areas for improvement to optimize performance and reduce unnecessary re-renders. With some minor adjustments, the code can be even more efficient and scalable."
+    }
+  },
+  {
+    "challengeId": "05-task-deletion",
+    "challengeName": "Task Deletion",
+    "aiReview": {
+      "challengeId": "05-task-deletion",
+      "timestamp": "2026-03-30T06:48:07.067Z",
+      "score": 83,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and functional components makes the code more maintainable and easier to understand.",
+        "The implementation of the task deletion feature is well-documented and easy to follow."
+      ],
+      "improvements": [
+        "Some of the functions are quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `window.confirm` for deletion confirmation is not ideal, as it can lead to issues with accessibility and browser compatibility.",
+        "The `handleDelete` function in `App.tsx` could be extracted into a separate function to avoid code duplication."
+      ],
+      "readability": 85,
+      "maintainability": 80,
+      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and accessible."
     }
   }
 ]

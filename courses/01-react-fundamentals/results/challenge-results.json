@@ -2193,25 +2193,25 @@
   {
     "challengeId": "05-task-deletion",
     "challengeName": "Task Deletion",
-    "timestamp": "2026-03-05T12:32:01.386Z",
+    "timestamp": "2026-03-30T06:47:28.055Z",
     "scores": {
-      "functionalTests": 33.3,
-      "codeQuality": 100,
+      "functionalTests": 83.3,
+      "codeQuality": 88,
       "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 66.7,
-      "aiReview": 88
+      "aiReview": 83
     },
-    "totalScore": 69.86,
-    "passed": false,
+    "totalScore": 84.81,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
-      "score": 33.3,
+      "score": 83.3,
       "passed": false,
       "totalTests": 6,
-      "passedTests": 2,
-      "failedTests": 4,
+      "passedTests": 5,
+      "failedTests": 1,
       "details": [
         {
           "assertionResults": [
@@ -2221,16 +2221,10 @@
                 "Challenge 05: Task Deletion"
               ],
               "fullName": " Challenge 05: Task Deletion TaskCard should render Delete button when onDelete and id provided",
-              "status": "failed",
+              "status": "passed",
               "title": "TaskCard should render Delete button when onDelete and id provided",
-              "duration": 67,
-              "failureMessages": [
-                "Unable to find an accessible element with the role \"button\" and name `/delete/i`\n\nThere are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m"
-              ],
-              "location": {
-                "line": 37,
-                "column": 19
-              }
+              "duration": 130,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -2240,7 +2234,7 @@
               "fullName": " Challenge 05: Task Deletion TaskCard should not render Delete button when onDelete not provided",
               "status": "passed",
               "title": "TaskCard should not render Delete button when onDelete not provided",
-              "duration": 2,
+              "duration": 4,
               "failureMessages": []
             },
             {
@@ -2251,13 +2245,13 @@
               "fullName": " Challenge 05: Task Deletion TaskCard should call onDelete when Delete clicked and user confirms",
               "status": "failed",
               "title": "TaskCard should call onDelete when Delete clicked and user confirms",
-              "duration": 15,
+              "duration": 91,
               "failureMessages": [
-                "Unable to find an accessible element with the role \"button\" and name `/delete/i`\n\nThere are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m"
+                "expected \"spy\" to be called with arguments: [ 1 ]\u001b[90m\n\nReceived: \n\n\u001b[1m  1st spy call:\n\n\u001b[22m\u001b[32m- Array [\u001b[90m\n\u001b[32m-   1,\u001b[90m\n\u001b[32m- ]\u001b[90m\n\u001b[31m+ Array []\u001b[90m\n\u001b[39m\u001b[90m\n\nNumber of calls: \u001b[1m1\u001b[22m\n\u001b[39m"
               ],
               "location": {
-                "line": 37,
-                "column": 19
+                "line": 40,
+                "column": 22
               }
             },
             {
@@ -2266,16 +2260,10 @@
                 "Challenge 05: Task Deletion"
               ],
               "fullName": " Challenge 05: Task Deletion TaskCard should not call onDelete when user cancels confirmation",
-              "status": "failed",
+              "status": "passed",
               "title": "TaskCard should not call onDelete when user cancels confirmation",
-              "duration": 12,
-              "failureMessages": [
-                "Unable to find an accessible element with the role \"button\" and name `/delete/i`\n\nThere are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole\n\nIgnored nodes: comments, script, style\n\u001b[36m<body>\u001b[39m\n  \u001b[36m<div />\u001b[39m\n\u001b[36m</body>\u001b[39m"
-              ],
-              "location": {
-                "line": 37,
-                "column": 19
-              }
+              "duration": 83,
+              "failureMessages": []
             },
             {
               "ancestorTitles": [
@@ -2285,7 +2273,7 @@
               "fullName": " Challenge 05: Task Deletion TaskList should pass onDelete to TaskCard when provided",
               "status": "passed",
               "title": "TaskList should pass onDelete to TaskCard when provided",
-              "duration": 41,
+              "duration": 58,
               "failureMessages": []
             },
             {
@@ -2294,20 +2282,14 @@
                 "Challenge 05: Task Deletion"
               ],
               "fullName": " Challenge 05: Task Deletion TaskList should show countText in #task-count",
-              "status": "failed",
+              "status": "passed",
               "title": "TaskList should show countText in #task-count",
               "duration": 6,
-              "failureMessages": [
-                "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).toHaveTextContent()\u001b[22m\n\n\u001b[31mreceived\u001b[39m value must be a Node.\n"
-              ],
-              "location": {
-                "line": 66,
-                "column": 51
-              }
+              "failureMessages": []
             }
           ],
-          "startTime": 1772713924123,
-          "endTime": 1772713924266,
+          "startTime": 1774853251569,
+          "endTime": 1774853251941,
           "status": "failed",
           "message": "",
           "name": "C:/Users/DELL/Music/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-05.test.tsx"
@@ -2316,11 +2298,11 @@
       "error": "Command failed: npm test -- C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-05.test.tsx --run --reporter=json"
     },
     "lintResults": {
-      "score": 100,
-      "passed": true,
-      "totalIssues": 0,
-      "errors": 0,
-      "warnings": 0,
+      "score": 88,
+      "passed": false,
+      "totalIssues": 2,
+      "errors": 1,
+      "warnings": 1,
       "details": [
         {
           "filePath": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\App.tsx",
@@ -2344,13 +2326,37 @@
         },
         {
           "filePath": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\components\\TaskApp.tsx",
-          "messages": [],
+          "messages": [
+            {
+              "ruleId": "react-hooks/exhaustive-deps",
+              "severity": 1,
+              "message": "React Hook useEffect has a missing dependency: 'savedTasks'. Either include it or remove the dependency array.",
+              "line": 94,
+              "column": 6,
+              "nodeType": "ArrayExpression",
+              "endLine": 94,
+              "endColumn": 8,
+              "suggestions": [
+                {
+                  "desc": "Update the dependencies array to be: [savedTasks]",
+                  "fix": {
+                    "range": [
+                      3215,
+                      3217
+                    ],
+                    "text": "[savedTasks]"
+                  }
+                }
+              ]
+            }
+          ],
           "suppressedMessages": [],
           "errorCount": 0,
           "fatalErrorCount": 0,
-          "warningCount": 0,
+          "warningCount": 1,
           "fixableErrorCount": 0,
           "fixableWarningCount": 0,
+          "source": "import React, { useEffect, useMemo, useReducer, useCallback } from 'react';\r\nimport TaskForm from './TaskForm';\r\nimport FilterBar from './FilterBar';\r\nimport TaskList from './TaskList';\r\nimport StatsPanel from './StatsPanel';\r\nimport ErrorBoundary from './ErrorBoundary';\r\nimport { useTheme, useLocalStorage } from '../contexts/ThemeContext';\r\n\r\ninterface Task {\r\n  id: number;\r\n  title: string;\r\n  description: string;\r\n  priority: string;\r\n  completed: boolean;\r\n  category?: string;\r\n  tags?: string[];\r\n  dueDate?: string;\r\n}\r\n\r\nconst ADD_TASK = 'ADD_TASK';\r\nconst UPDATE_TASK = 'UPDATE_TASK';\r\nconst DELETE_TASK = 'DELETE_TASK';\r\nconst TOGGLE_TASK = 'TOGGLE_TASK';\r\nconst SET_TASKS = 'SET_TASKS';\r\n\r\ntype Action =\r\n  | { type: typeof ADD_TASK; payload: Task }\r\n  | { type: typeof UPDATE_TASK; payload: Partial<Task> & { id: number } }\r\n  | { type: typeof DELETE_TASK; payload: number }\r\n  | { type: typeof TOGGLE_TASK; payload: number }\r\n  | { type: typeof SET_TASKS; payload: Task[] };\r\n\r\nconst addTask = (task: Task): Action => ({ type: ADD_TASK, payload: task });\r\nconst updateTask = (updates: Partial<Task> & { id: number }): Action => ({ type: UPDATE_TASK, payload: updates });\r\nconst deleteTask = (id: number): Action => ({ type: DELETE_TASK, payload: id });\r\nconst toggleTask = (id: number): Action => ({ type: TOGGLE_TASK, payload: id });\r\nconst setTasksAction = (tasks: Task[]): Action => ({ type: SET_TASKS, payload: tasks });\r\n\r\nfunction taskReducer(state: Task[], action: Action): Task[] {\r\n  switch (action.type) {\r\n    case ADD_TASK:\r\n      return [...state, action.payload];\r\n    case UPDATE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload.id ? { ...t, ...action.payload } : t\r\n      );\r\n    case DELETE_TASK:\r\n      return state.filter((t) => t.id !== action.payload);\r\n    case TOGGLE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload ? { ...t, completed: !t.completed } : t\r\n      );\r\n    case SET_TASKS:\r\n      return action.payload;\r\n    default:\r\n      return state;\r\n  }\r\n}\r\n\r\ninterface TaskAppProps {\r\n  showStatsPanel?: boolean;\r\n  showFilterBar?: boolean;\r\n  linkToTaskDetail?: boolean;\r\n}\r\n\r\nfunction ThemeToggle() {\r\n  const { theme, toggleTheme } = useTheme();\r\n  return (\r\n    <button\r\n      id=\"theme-toggle\"\r\n      onClick={toggleTheme}\r\n      className=\"theme-toggle-btn\"\r\n      aria-label=\"Toggle theme\"\r\n    >\r\n      {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}\r\n    </button>\r\n  );\r\n}\r\n\r\nfunction TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetail = false }: TaskAppProps) {\r\n  const { theme } = useTheme();\r\n  const [savedTasks, setSavedTasks] = useLocalStorage<Task[]>('task-app-tasks', []);\r\n  const [tasks, dispatch] = useReducer(taskReducer, savedTasks);\r\n  const [filter, setFilter] = useLocalStorage<string>('task-app-filter', '');\r\n  const [sortOption, setSortOption] = useLocalStorage<string>('task-app-sort', '');\r\n  const [debouncedFilter, setDebouncedFilter] = React.useState(filter);\r\n\r\n  useEffect(() => {\r\n    setSavedTasks(tasks);\r\n  }, [tasks, setSavedTasks]);\r\n\r\n  useEffect(() => {\r\n    dispatch(setTasksAction(savedTasks)); // eslint-disable-line react-hooks/exhaustive-deps\r\n  }, []);\r\n\r\n  useEffect(() => {\r\n    const timer = setTimeout(() => setDebouncedFilter(filter), 300);\r\n    return () => clearTimeout(timer);\r\n  }, [filter]);\r\n\r\n  const handleAddTask = useCallback((title: string, dueDate?: string) => {\r\n    const newTask: Task = {\r\n      id: Date.now(),\r\n      title,\r\n      description: '',\r\n      priority: 'High',\r\n      completed: false,\r\n      dueDate,\r\n    };\r\n    dispatch(addTask(newTask));\r\n  }, [dispatch]);\r\n\r\n  const handleToggleTask = useCallback((id: number) => {\r\n    dispatch(toggleTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleDeleteTask = useCallback((id: number) => {\r\n    dispatch(deleteTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleUpdateTask = useCallback((updates: Partial<Task> & { id: number }) => {\r\n    dispatch(updateTask(updates));\r\n  }, [dispatch]);\r\n\r\n  const handleFilterChange = useCallback((val: string) => {\r\n    setFilter(val);\r\n  }, [setFilter]);\r\n\r\n  const handleSortChange = useCallback((val: string) => {\r\n    setSortOption(val);\r\n  }, [setSortOption]);\r\n\r\n  const stats = useMemo(() => {\r\n    const total = tasks.length;\r\n    const completed = tasks.filter((t) => t.completed).length;\r\n    const active = tasks.filter((t) => !t.completed).length;\r\n    const today = new Date();\r\n    today.setHours(0, 0, 0, 0);\r\n    const overdue = tasks.filter((t) => {\r\n      if (t.completed || !t.dueDate) return false;\r\n      return new Date(t.dueDate) < today;\r\n    }).length;\r\n    return { total, completed, active, overdue };\r\n  }, [tasks]);\r\n\r\n  const filteredAndSortedTasks = useMemo(() => {\r\n    let result = tasks.filter((task) =>\r\n      task.title.toLowerCase().includes(debouncedFilter.toLowerCase())\r\n    );\r\n    if (sortOption === 'due-date') {\r\n      result = [...result].sort((a, b) => {\r\n        if (!a.dueDate && !b.dueDate) return 0;\r\n        if (!a.dueDate) return 1;\r\n        if (!b.dueDate) return -1;\r\n        return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();\r\n      });\r\n    }\r\n    return result;\r\n  }, [tasks, debouncedFilter, sortOption]);\r\n\r\n  return (\r\n    <div className=\"task-app-container\" data-theme={theme}>\r\n      <ThemeToggle />\r\n      {showStatsPanel && (\r\n        <StatsPanel\r\n          total={stats.total}\r\n          completed={stats.completed}\r\n          active={stats.active}\r\n          overdue={stats.overdue}\r\n        />\r\n      )}\r\n      <TaskForm onAdd={handleAddTask} />\r\n      {showFilterBar && (\r\n        <FilterBar\r\n          filter={filter}\r\n          onFilterChange={handleFilterChange}\r\n          sortOption={sortOption}\r\n          onSortChange={handleSortChange}\r\n        />\r\n      )}\r\n      <ErrorBoundary>\r\n        <TaskList\r\n          tasks={filteredAndSortedTasks}\r\n          countText={`${filteredAndSortedTasks.length} Tasks`}\r\n          onToggle={handleToggleTask}\r\n          onDelete={handleDeleteTask}\r\n          onUpdate={handleUpdateTask}\r\n          linkToTaskDetail={linkToTaskDetail}\r\n        />\r\n      </ErrorBoundary>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default TaskApp;",
           "usedDeprecatedRules": [
             {
               "ruleId": "no-extra-semi",
@@ -2364,13 +2370,26 @@
         },
         {
           "filePath": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\components\\TaskCard.tsx",
-          "messages": [],
+          "messages": [
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_onUpdate' is defined but never used.",
+              "line": 125,
+              "column": 13,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 125,
+              "endColumn": 22
+            }
+          ],
           "suppressedMessages": [],
-          "errorCount": 0,
+          "errorCount": 1,
           "fatalErrorCount": 0,
           "warningCount": 0,
           "fixableErrorCount": 0,
           "fixableWarningCount": 0,
+          "source": "// import React from 'react';\r\n// import { Link } from 'react-router-dom';\r\n// import Badge from './Badge';\r\n// import StatusIndicator from './StatusIndicator';\r\n// import Button from './Button';\r\n\r\n// interface TaskCardProps {\r\n//   id?: number;\r\n//   title: string;\r\n//   description: string;\r\n//   priority: string;\r\n//   category?: string;\r\n//   tags?: string[];\r\n//   completed?: boolean;\r\n//   dueDate?: string;\r\n//   onToggle?: () => void;\r\n//   onDelete?: () => void;\r\n//   onUpdate?: (updates: { title?: string; description?: string; priority?: string }) => void;\r\n//   linkToTaskDetail?: boolean;\r\n// }\r\n\r\n// function getDueDateStatus(dueDate: string, completed: boolean) {\r\n//   const today = new Date();\r\n//   today.setHours(0, 0, 0, 0);\r\n//   const due = new Date(dueDate);\r\n//   due.setHours(0, 0, 0, 0);\r\n//   const diffDays = Math.ceil((due.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));\r\n//   if (!completed && diffDays < 0) return 'overdue' as const;\r\n//   if (diffDays === 0) return 'due-today' as const;\r\n//   if (diffDays <= 3) return 'due-soon' as const;\r\n//   return null;\r\n// }\r\n\r\n// function TaskCard({\r\n//   id, title, description, priority, category, tags,\r\n//   completed = false, dueDate, onToggle, onDelete, onUpdate,\r\n//   linkToTaskDetail = false,\r\n// }: TaskCardProps) {\r\n//   const status = dueDate ? getDueDateStatus(dueDate, completed) : null;\r\n//   const isOverdue = status === 'overdue';\r\n\r\n//   return (\r\n//     <div\r\n//       className={`task-card ${isOverdue ? 'overdue' : ''}`}\r\n//       data-overdue={isOverdue ? 'true' : undefined}\r\n//     >\r\n//       <h3>\r\n//         {linkToTaskDetail && id ? (\r\n//           <Link to={`/challenge/21-react-router/task/${id}`}>\r\n//             {title}\r\n//           </Link>\r\n//         ) : (\r\n//           title\r\n//         )}\r\n//       </h3>\r\n//       <p>{description}</p>\r\n//       <Badge variant=\"priority\">Priority: {priority}</Badge>\r\n//       {dueDate && (\r\n//         <span id=\"task-due-date\">\r\n//           {new Date(dueDate).toLocaleDateString()}\r\n//         </span>\r\n//       )}\r\n//       {status && <StatusIndicator status={status} />}\r\n//       {completed && <StatusIndicator status=\"completed\" />}\r\n//       {category && <Badge variant=\"category\">{category}</Badge>}\r\n//       {tags && tags.map((tag) => (\r\n//         <Badge key={tag} variant=\"tag\">{tag}</Badge>\r\n//       ))}\r\n//       <div className=\"task-actions\">\r\n//         {onToggle && (\r\n//           <Button variant=\"secondary\" onClick={onToggle}>\r\n//             {completed ? 'Undo' : 'Complete'}\r\n//           </Button>\r\n//         )}\r\n//         {onDelete && (\r\n//           <Button variant=\"danger\" onClick={onDelete}>\r\n//             Delete\r\n//           </Button>\r\n//         )}\r\n//       </div>\r\n//     </div>\r\n//   );\r\n// }\r\n\r\n// export default React.memo(TaskCard);\r\n\r\n\r\n\r\nimport React from 'react';\r\nimport { Link } from 'react-router-dom';\r\nimport Badge from './Badge';\r\nimport StatusIndicator from './StatusIndicator';\r\nimport Button from './Button';\r\n\r\ninterface TaskCardProps {\r\n  id?: number;\r\n  title: string;\r\n  description: string;\r\n  priority: string;\r\n  category?: string;\r\n  tags?: string[];\r\n  completed?: boolean;\r\n  dueDate?: string;\r\n  onToggle?: () => void;\r\n  onDelete?: () => void;\r\n  onUpdate?: (updates: { title?: string; description?: string; priority?: string }) => void;\r\n  linkToTaskDetail?: boolean;\r\n}\r\n\r\nfunction getDueDateStatus(dueDate: string, completed: boolean) {\r\n  const today = new Date();\r\n  today.setHours(0, 0, 0, 0);\r\n  const due = new Date(dueDate);\r\n  due.setHours(0, 0, 0, 0);\r\n  const diffDays = Math.ceil((due.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));\r\n  if (!completed && diffDays < 0) return 'overdue' as const;\r\n  if (diffDays === 0) return 'due-today' as const;\r\n  if (diffDays <= 3) return 'due-soon' as const;\r\n  return null;\r\n}\r\n\r\nfunction TaskCard({\r\n  id, title, description, priority, category, tags,\r\n  completed = false, dueDate, onToggle, onDelete,\r\n  onUpdate: _onUpdate,\r\n  linkToTaskDetail = false,\r\n}: TaskCardProps) {\r\n  const status = dueDate ? getDueDateStatus(dueDate, completed) : null;\r\n  const isOverdue = status === 'overdue';\r\n\r\n  const handleDelete = () => {\r\n    if (window.confirm('Are you sure?') && onDelete) {\r\n      onDelete();\r\n    }\r\n  };\r\n\r\n  return (\r\n    <div\r\n      className={`task-card ${isOverdue ? 'overdue' : ''}`}\r\n      data-overdue={isOverdue ? 'true' : undefined}\r\n    >\r\n      <h3>\r\n        {linkToTaskDetail && id ? (\r\n          <Link to={`/challenge/21-react-router/task/${id}`}>\r\n            {title}\r\n          </Link>\r\n        ) : (\r\n          title\r\n        )}\r\n      </h3>\r\n      <p>{description}</p>\r\n      <Badge variant=\"priority\">Priority: {priority}</Badge>\r\n      {dueDate && (\r\n        <span id=\"task-due-date\">\r\n          {new Date(dueDate).toLocaleDateString()}\r\n        </span>\r\n      )}\r\n      {status && <StatusIndicator status={status} />}\r\n      {completed && <StatusIndicator status=\"completed\" />}\r\n      {category && <Badge variant=\"category\">{category}</Badge>}\r\n      {tags && tags.map((tag) => (\r\n        <Badge key={tag} variant=\"tag\">{tag}</Badge>\r\n      ))}\r\n      <div className=\"task-actions\">\r\n        {onToggle && (\r\n          <Button variant=\"secondary\" onClick={onToggle}>\r\n            {completed ? 'Undo' : 'Complete'}\r\n          </Button>\r\n        )}\r\n        {onDelete && (\r\n          <Button variant=\"danger\" onClick={handleDelete}>\r\n            Delete\r\n          </Button>\r\n        )}\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default React.memo(TaskCard);",
           "usedDeprecatedRules": [
             {
               "ruleId": "no-extra-semi",
@@ -2416,29 +2435,26 @@
         {
           "file": "src/components/TaskCard.tsx",
           "patternsFound": [
+            "functionalComponent",
             "props"
           ],
-          "patternsMissing": [
-            "functionalComponent"
-          ]
+          "patternsMissing": []
         },
         {
           "file": "src/components/TaskList.tsx",
           "patternsFound": [
+            "functionalComponent",
             "props"
           ],
-          "patternsMissing": [
-            "functionalComponent"
-          ]
+          "patternsMissing": []
         },
         {
           "file": "src/components/TaskApp.tsx",
           "patternsFound": [
+            "functionalComponent",
             "props"
           ],
-          "patternsMissing": [
-            "functionalComponent"
-          ]
+          "patternsMissing": []
         },
         {
           "file": "src/App.tsx",
@@ -2493,7 +2509,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5371,
+                          "duration": 5420,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-05.spec.ts:9:46",
@@ -2517,7 +2533,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-05T12:32:11.522Z",
+                          "startTime": "2026-03-30T06:47:41.944Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -2541,7 +2557,7 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5472,
+                          "duration": 5645,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-05.spec.ts:9:46",
@@ -2565,7 +2581,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-03-05T12:32:18.490Z",
+                          "startTime": "2026-03-30T06:47:49.920Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -2594,7 +2610,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5323,
+                          "duration": 5410,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-05.spec.ts:9:46",
@@ -2618,7 +2634,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-03-05T12:32:25.594Z",
+                          "startTime": "2026-03-30T06:47:57.984Z",
                           "annotations": [],
                           "attachments": [
                             {
@@ -2663,12 +2679,12 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 363,
+                          "duration": 482,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-05T12:32:32.407Z",
+                          "startTime": "2026-03-30T06:48:05.547Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -2697,12 +2713,12 @@
                           "workerIndex": 3,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 242,
+                          "duration": 377,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-05T12:32:32.925Z",
+                          "startTime": "2026-03-30T06:48:06.191Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -2725,41 +2741,41 @@
     },
     "aiReviewResults": {
       "challengeId": "05-task-deletion",
-      "timestamp": "2026-03-05T12:32:33.601Z",
-      "score": 88,
+      "timestamp": "2026-03-30T06:48:07.067Z",
+      "score": 83,
       "feedback": [],
       "strengths": [
         "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The implementation of the delete functionality is clean and easy to understand."
+        "The use of TypeScript and functional components makes the code more maintainable and easier to understand.",
+        "The implementation of the task deletion feature is well-documented and easy to follow."
       ],
       "improvements": [
-        "In the `TaskCard` component, the `handleDelete` function can be simplified by using the optional chaining operator (`?.`) to avoid the null check.",
-        "In the `App` component, the `handleDelete` function can be extracted into a separate function to make the code more modular and reusable.",
-        "The `onDelete` prop in the `TaskApp` component can be made optional by default, so that it doesn't break the component if it's not provided."
+        "Some of the functions are quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `window.confirm` for deletion confirmation is not ideal, as it can lead to issues with accessibility and browser compatibility.",
+        "The `handleDelete` function in `App.tsx` could be extracted into a separate function to avoid code duplication."
       ],
       "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, with a good balance between simplicity and functionality. However, there are some minor improvements that can be made to make the code even more efficient and scalable."
+      "maintainability": 80,
+      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and accessible."
     },
     "aiResults": {
       "challengeId": "05-task-deletion",
-      "timestamp": "2026-03-05T12:32:33.601Z",
-      "score": 88,
+      "timestamp": "2026-03-30T06:48:07.067Z",
+      "score": 83,
       "feedback": [],
       "strengths": [
         "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and scalable.",
-        "The implementation of the delete functionality is clean and easy to understand."
+        "The use of TypeScript and functional components makes the code more maintainable and easier to understand.",
+        "The implementation of the task deletion feature is well-documented and easy to follow."
       ],
       "improvements": [
-        "In the `TaskCard` component, the `handleDelete` function can be simplified by using the optional chaining operator (`?.`) to avoid the null check.",
-        "In the `App` component, the `handleDelete` function can be extracted into a separate function to make the code more modular and reusable.",
-        "The `onDelete` prop in the `TaskApp` component can be made optional by default, so that it doesn't break the component if it's not provided."
+        "Some of the functions are quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `window.confirm` for deletion confirmation is not ideal, as it can lead to issues with accessibility and browser compatibility.",
+        "The `handleDelete` function in `App.tsx` could be extracted into a separate function to avoid code duplication."
       ],
       "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, with a good balance between simplicity and functionality. However, there are some minor improvements that can be made to make the code even more efficient and scalable."
+      "maintainability": 80,
+      "overall": "The code is well-structured and follows good practices, but there are some areas for improvement to make it more maintainable and accessible."
     }
   },
   {

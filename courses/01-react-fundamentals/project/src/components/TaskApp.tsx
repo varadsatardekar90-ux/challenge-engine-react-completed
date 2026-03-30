@@ -87,10 +87,10 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
 
   useEffect(() => {
     setSavedTasks(tasks);
-  }, [tasks]);
+  }, [tasks, setSavedTasks]);
 
   useEffect(() => {
-    dispatch(setTasksAction(savedTasks));
+    dispatch(setTasksAction(savedTasks)); // eslint-disable-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
