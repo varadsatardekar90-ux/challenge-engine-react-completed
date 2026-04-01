@@ -64,12 +64,12 @@ npm run review -- --challenge=01-app-router-pages-layout
 
 ## 📊 Progress Evidence
 
-*Auto-updated when you run review. Last run: 28/3/2026, 2:41:33 pm*
+*Auto-updated when you run review. Last run: 1/4/2026, 7:24:46 pm*
 
 | Metric | Value |
 |--------|-------|
-| Challenges completed | 15 / 17 (88.2%) |
-| Average score | 81.5% |
+| Challenges completed | 17 / 17 (100%) |
+| Average score | 83% |
 
 | Challenge | Skills covered | Status |
 |-----------|----------------|--------|
@@ -78,13 +78,13 @@ npm run review -- --challenge=01-app-router-pages-layout
 | Data Fetching in Server Components | Async Server Components, fetch, Data fetching, Server-side data | Passed |
 | API Route Handlers | Route Handlers, app/api, GET, POST, Response.json | Passed |
 | Loading and Streaming | loading.tsx, Streaming, Suspense, Loading UI | Passed |
-| Dynamic Routes | Dynamic Routes, [id], params, generateStaticParams | Not passed |
+| Dynamic Routes | Dynamic Routes, [id], params, generateStaticParams | Passed |
 | Static and Dynamic Rendering | Static Rendering, Dynamic Rendering, force-static, force-dynamic | Passed |
 | SSR (Server-Side Rendering) | SSR, force-dynamic, cache: no-store, Server-side rendering | Passed |
 | Server Actions and Revalidation | Server Actions, 'use server', revalidatePath, revalidateTag | Passed |
 | Caching and Revalidating | fetch cache, revalidate, revalidatePath, revalidateTag | Passed |
 | Error Handling | error.tsx, notFound(), not-found.tsx, Error boundaries | Passed |
-| Metadata and SEO | metadata, generateMetadata, Open Graph, SEO | Not passed |
+| Metadata and SEO | metadata, generateMetadata, Open Graph, SEO | Passed |
 | Images and Fonts | next/image, next/font, Image optimization, Font optimization | Passed |
 | Search and Pagination | searchParams, URL search params, Pagination, Filtering | Passed |
 | Redux Toolkit with Next.js | Redux Toolkit, configureStore, Provider, useSelector, useDispatch | Passed |

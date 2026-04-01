@@ -1,11 +1,11 @@
 {
   "courseId": "03-nextjs-app-router",
   "courseName": "Next.js App Router",
-  "lastUpdated": "2026-03-28T09:11:33.878Z",
+  "lastUpdated": "2026-04-01T13:54:46.673Z",
   "totalChallenges": 17,
-  "completedChallenges": 15,
-  "averageScore": 81.5,
-  "completionPercentage": 88.2,
+  "completedChallenges": 17,
+  "averageScore": 83,
+  "completionPercentage": 100,
   "badgeLevel": "silver",
   "challengeResults": [
     {
@@ -41,8 +41,8 @@
     {
       "challengeId": "06-dynamic-routes",
       "challengeName": "Dynamic Routes",
-      "score": 65,
-      "passed": false
+      "score": 83.2,
+      "passed": true
     },
     {
       "challengeId": "07-static-and-dynamic-rendering",
@@ -77,8 +77,8 @@
     {
       "challengeId": "12-metadata-and-seo",
       "challengeName": "Metadata and SEO",
-      "score": 76.53,
-      "passed": false
+      "score": 83.2,
+      "passed": true
     },
     {
       "challengeId": "13-images-and-fonts",
@@ -117,18 +117,18 @@
     "Data Fetching in Server Components",
     "API Route Handlers",
     "Loading and Streaming",
+    "Dynamic Routes",
     "Static and Dynamic Rendering",
     "SSR (Server-Side Rendering)",
     "Server Actions and Revalidation",
     "Caching and Revalidating",
     "Error Handling",
+    "Metadata and SEO",
     "Images and Fonts",
     "Search and Pagination",
     "Redux Toolkit with Next.js",
     "RTK Query with Next.js",
     "Fullstack Capstone"
   ],
-  "improvementAreas": [
-    "Dynamic Routes"
-  ]
+  "improvementAreas": []
 }

@@ -115,22 +115,6 @@
     }
   },
   {
-    "challengeId": "06-dynamic-routes",
-    "challengeName": "Dynamic Routes",
-    "aiReview": {
-      "challengeId": "06-dynamic-routes",
-      "timestamp": "2026-03-21T11:51:23.797Z",
-      "score": 0,
-      "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "fetch failed"
-    }
-  },
-  {
     "challengeId": "07-static-and-dynamic-rendering",
     "challengeName": "Static and Dynamic Rendering",
     "aiReview": {
@@ -246,29 +230,6 @@
     }
   },
   {
-    "challengeId": "12-metadata-and-seo",
-    "challengeName": "Metadata and SEO",
-    "aiReview": {
-      "challengeId": "12-metadata-and-seo",
-      "timestamp": "2026-03-23T10:46:02.379Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows the Next.js App Router conventions.",
-        "The use of TypeScript is consistent throughout the codebase.",
-        "The code is free of console statements and passes ESLint."
-      ],
-      "improvements": [
-        "In the `app/posts/page.tsx` file, the `PostsPage` function is defined as an async function, but it's not clear why it's not using the `useEffect` hook to fetch the data. Consider refactoring to use `useEffect` for better code organization.",
-        "In the `app/layout.tsx` file, the `metadata` object is defined with `title` and `description` properties, but it's not clear why the `openGraph` property is also defined. Consider removing the `openGraph` property if it's not being used.",
-        "In the `app/page.tsx` file, the `dynamic` property is set to `'force-static'`, but it's not clear why it's not being used. Consider removing the `dynamic` property if it's not being used."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and follows the Next.js App Router conventions. However, there are some areas for improvement, such as refactoring the `PostsPage` function to use `useEffect` and removing unused properties. Overall, the code is maintainable and easy to read."
-    }
-  },
-  {
     "challengeId": "13-images-and-fonts",
     "challengeName": "Images and Fonts",
     "aiReview": {
@@ -381,6 +342,52 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured and effectively implements multiple Next.js features. However, there are some areas for improvement to enhance maintainability and user experience."
+    }
+  },
+  {
+    "challengeId": "06-dynamic-routes",
+    "challengeName": "Dynamic Routes",
+    "aiReview": {
+      "challengeId": "06-dynamic-routes",
+      "timestamp": "2026-04-01T09:14:30.378Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript type annotations is excellent, making the code more maintainable and self-documenting.",
+        "The code is well-commented, making it easier for others to understand the functionality."
+      ],
+      "improvements": [
+        "Some of the variable names, such as `res` and `post`, could be more descriptive to improve code readability.",
+        "The `notFound` function is called multiple times in the code. Consider extracting it into a separate function to reduce code duplication.",
+        "The `generateStaticParams` function returns an array of objects with a single property. Consider using a more concise data structure, such as a tuple or an array of strings."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and follows best practices. However, there are some minor improvements that can be made to enhance code readability and reduce duplication."
+    }
+  },
+  {
+    "challengeId": "12-metadata-and-seo",
+    "challengeName": "Metadata and SEO",
+    "aiReview": {
+      "challengeId": "12-metadata-and-seo",
+      "timestamp": "2026-04-01T13:54:44.109Z",
+      "score": 88,
+      "feedback": [],
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and Next.js features such as `metadata` and `generateMetadata` is well-implemented.",
+        "The code is free of console statements and passes ESLint."
+      ],
+      "improvements": [
+        "Some of the functions and variables could be extracted into separate files to improve code organization and reusability.",
+        "The `PostsPage` function is quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `Suspense` could be improved by adding a loading indicator or a more informative message to the user."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and effectively uses Next.js features. However, there are opportunities for improvement in code organization and user experience."
     }
   }
 ]

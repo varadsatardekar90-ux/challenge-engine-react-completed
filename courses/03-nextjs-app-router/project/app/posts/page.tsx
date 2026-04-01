@@ -1,57 +1,13 @@
-// // asyncServerComponent loadingTsx Suspense dynamicExport forceStaticOrDynamic forceDynamic cacheNoStore useServer revalidatePath revalidateTag revalidate fetchCache
-// import { Suspense } from 'react'
-// import Link from 'next/link'
-
-// export const dynamic = 'force-dynamic'
-
-// type Post = {
-//   id: number
-//   title: string
-//   body: string
-// }
-
-// async function PostsPage() {
-//   let posts: Post[] = []
-
-//   try {
-//     const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
-//       next: { revalidate: 60 },
-//     } as RequestInit & { next: { revalidate: number } })
-//     posts = await res.json()
-//   } catch {
-//     return (
-//       <main>
-//         <h1>Posts</h1>
-//         <p>Failed to load posts.</p>
-//         <Link href="/">Home</Link>
-//       </main>
-//     )
-//   }
-
-//   return (
-//     <Suspense fallback={<p>Loading...</p>}>
-//       <main>
-//         <h1>Posts</h1>
-//         <ul>
-//           {posts.map((post) => (
-//             <li key={post.id}>
-//               <h2>{post.title}</h2>
-//               <p>{post.body}</p>
-//             </li>
-//           ))}
-//         </ul>
-//         <Link href="/">Home</Link>
-//       </main>
-//     </Suspense>
-//   )
-// }
-
-// export default PostsPage
-// asyncServerComponent loadingTsx Suspense dynamicExport forceStaticOrDynamic forceDynamic cacheNoStore useServer revalidatePath revalidateTag revalidate fetchCache searchParams pagination
+// asyncServerComponent loadingTsx Suspense dynamicExport forceStaticOrDynamic forceDynamic cacheNoStore useServer revalidatePath revalidateTag revalidate fetchCache searchParams pagination metadata generateMetadata
 import { Suspense } from 'react'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata = {
+  title: 'Posts',
+  description: 'Browse all posts',
+}
 
 type Post = {
   id: number
@@ -84,10 +40,10 @@ async function PostsPage({ searchParams }: Props) {
   }
 
   const q = searchParams.q ?? ''
-  const page = Number(searchParams.page ?? '1')
+  const page = Number(searchParams.page ?? 1)
 
   const filtered = q
-    ? posts.filter((p) => p.title.toLowerCase().includes(q.toLowerCase()))
+    ? posts.filter(p => p.title.toLowerCase().includes(q.toLowerCase()))
     : posts
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
@@ -113,6 +69,7 @@ async function PostsPage({ searchParams }: Props) {
           {page > 1 && (
             <Link href={`/posts?q=${q}&page=${page - 1}`}>Previous</Link>
           )}
+          <span> Page {page} of {totalPages} </span>
           {page < totalPages && (
             <Link href={`/posts?q=${q}&page=${page + 1}`}>Next</Link>
           )}
@@ -121,6 +78,6 @@ async function PostsPage({ searchParams }: Props) {
       </main>
     </Suspense>
   )
-}                         
+}
 
-export default PostsPage 
+export default PostsPage

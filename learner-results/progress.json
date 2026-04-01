@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-03-30T06:48:11.568Z",
+  "lastUpdated": "2026-04-01T13:54:48.589Z",
   "pathway": {
     "name": "Modern React Engineer",
     "version": "1.0.0",
-    "overallScore": 82.9,
-    "completionPercentage": 90.6,
+    "overallScore": 84.1,
+    "completionPercentage": 100,
     "badgeLevel": "silver",
     "totalChallenges": 53,
-    "completedChallenges": 48
+    "completedChallenges": 53
   },
   "courses": {
     "01-react-fundamentals": {
       "courseId": "01-react-fundamentals",
       "courseName": "React Fundamentals",
-      "averageScore": 84.1,
-      "completionPercentage": 87,
+      "averageScore": 86.2,
+      "completionPercentage": 100,
       "badgeLevel": "silver",
       "totalChallenges": 23,
-      "completedChallenges": 20,
+      "completedChallenges": 23,
       "challenges": {
         "01-static-task-display": {
           "challengeId": "01-static-task-display",
@@ -97,27 +97,27 @@
         "06-task-filtering": {
           "challengeId": "06-task-filtering",
           "challengeName": "Task Filtering",
-          "passed": false,
-          "score": 76.2,
-          "lastRun": "2026-02-27T10:05:19.943Z",
+          "passed": true,
+          "score": 88.9,
+          "lastRun": "2026-04-01T06:56:36.945Z",
           "scores": {
-            "functionalTests": 80,
-            "codeQuality": 100,
+            "functionalTests": 100,
+            "codeQuality": 88,
             "architecture": 100,
             "bestPractices": 100,
-            "e2eTests": 0,
+            "e2eTests": 50,
             "aiReview": 88
           }
         },
         "07-priority-based-sorting": {
           "challengeId": "07-priority-based-sorting",
           "challengeName": "Priority-Based Sorting",
-          "passed": false,
-          "score": 59.855000000000004,
-          "lastRun": "2026-02-27T11:12:37.191Z",
+          "passed": true,
+          "score": 81.4,
+          "lastRun": "2026-04-01T08:29:08.858Z",
           "scores": {
-            "functionalTests": 33.3,
-            "codeQuality": 100,
+            "functionalTests": 100,
+            "codeQuality": 88,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 0,
@@ -247,16 +247,16 @@
         "16-context-api-theme": {
           "challengeId": "16-context-api-theme",
           "challengeName": "Context API - Theme Management",
-          "passed": false,
-          "score": 69.4,
-          "lastRun": "2026-03-11T05:26:53.170Z",
+          "passed": true,
+          "score": 82.60000000000001,
+          "lastRun": "2026-04-01T09:04:21.826Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 96,
             "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 0,
-            "aiReview": 0
+            "aiReview": 88
           }
         },
         "17-custom-hook-uselocalstorage": {
@@ -575,11 +575,11 @@
     "03-nextjs-app-router": {
       "courseId": "03-nextjs-app-router",
       "courseName": "Next.js App Router",
-      "averageScore": 81.5,
-      "completionPercentage": 88.2,
+      "averageScore": 83,
+      "completionPercentage": 100,
       "badgeLevel": "silver",
       "totalChallenges": 17,
-      "completedChallenges": 15,
+      "completedChallenges": 17,
       "challenges": {
         "01-app-router-pages-layout": {
           "challengeId": "01-app-router-pages-layout",
@@ -659,16 +659,16 @@
         "06-dynamic-routes": {
           "challengeId": "06-dynamic-routes",
           "challengeName": "Dynamic Routes",
-          "passed": false,
-          "score": 65,
-          "lastRun": "2026-03-21T11:50:09.655Z",
+          "passed": true,
+          "score": 83.2,
+          "lastRun": "2026-04-01T09:14:18.715Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
-            "architecture": 50,
+            "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 0,
-            "aiReview": 0
+            "aiReview": 88
           }
         },
         "07-static-and-dynamic-rendering": {
@@ -749,13 +749,13 @@
         "12-metadata-and-seo": {
           "challengeId": "12-metadata-and-seo",
           "challengeName": "Metadata and SEO",
-          "passed": false,
-          "score": 76.53,
-          "lastRun": "2026-03-23T10:45:57.087Z",
+          "passed": true,
+          "score": 83.2,
+          "lastRun": "2026-04-01T13:54:32.882Z",
           "scores": {
             "functionalTests": 100,
             "codeQuality": 100,
-            "architecture": 33.3,
+            "architecture": 100,
             "bestPractices": 100,
             "e2eTests": 0,
             "aiReview": 88

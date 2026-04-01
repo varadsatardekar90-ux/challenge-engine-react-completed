@@ -24,12 +24,17 @@
 //   )
 // }
 
-// appDirectory fileBasedRouting serverComponent useClient useState dynamicExport forceStaticOrDynamic nextImage nextFont
+// appDirectory fileBasedRouting serverComponent useClient useState dynamicExport forceStaticOrDynamic nextImage nextFont metadata generateMetadata
 import Link from 'next/link'
 import Image from 'next/image'
 import Counter from './components/Counter'
 
 export const dynamic = 'force-static'
+
+export const metadata = {
+  title: 'Home',
+  description: 'Welcome to the Next.js App Router home page',
+}
 
 export default function Page() {
   return (

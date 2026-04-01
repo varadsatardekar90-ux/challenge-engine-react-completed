@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useReducer, useCallback } from 'react';
+import React, { useEffect, useMemo, useReducer, useCallback, useState } from 'react';
 import TaskForm from './TaskForm';
 import FilterBar from './FilterBar';
 import TaskList from './TaskList';
@@ -36,6 +36,8 @@ const deleteTask = (id: number): Action => ({ type: DELETE_TASK, payload: id });
 const toggleTask = (id: number): Action => ({ type: TOGGLE_TASK, payload: id });
 const setTasksAction = (tasks: Task[]): Action => ({ type: SET_TASKS, payload: tasks });
 
+const PRIORITY_WEIGHT: Record<string, number> = { High: 3, Medium: 2, Low: 1 };
+
 function taskReducer(state: Task[], action: Action): Task[] {
   switch (action.type) {
     case ADD_TASK:
@@ -58,9 +60,16 @@ function taskReducer(state: Task[], action: Action): Task[] {
 }
 
 interface TaskAppProps {
+  // Internal props
   showStatsPanel?: boolean;
   showFilterBar?: boolean;
   linkToTaskDetail?: boolean;
+  // Legacy props from App.tsx (accepted but managed internally)
+  tasks?: Task[];
+  setTasks?: React.Dispatch<React.SetStateAction<Task[]>>;
+  showForm?: boolean;
+  countFormat?: string;
+  onDelete?: (id: string | number) => void;
 }
 
 function ThemeToggle() {
@@ -77,13 +86,25 @@ function ThemeToggle() {
   );
 }
 
-function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetail = false }: TaskAppProps) {
+type FilterOption = 'all' | 'active' | 'completed';
+
+function TaskApp({
+  showStatsPanel = false,
+  showFilterBar = true,
+  linkToTaskDetail = false,
+  tasks: _tasks,
+  setTasks: _setTasks,
+  showForm: _showForm,
+  countFormat: _countFormat,
+  onDelete: _onDelete,
+}: TaskAppProps) {
   const { theme } = useTheme();
   const [savedTasks, setSavedTasks] = useLocalStorage<Task[]>('task-app-tasks', []);
   const [tasks, dispatch] = useReducer(taskReducer, savedTasks);
-  const [filter, setFilter] = useLocalStorage<string>('task-app-filter', '');
-  const [sortOption, setSortOption] = useLocalStorage<string>('task-app-sort', '');
-  const [debouncedFilter, setDebouncedFilter] = React.useState(filter);
+  const [filter, setFilter] = useState<FilterOption>('all');
+  const [sortOption, setSortOption] = useState<string>('');
+  const [searchFilter, setSearchFilter] = useLocalStorage<string>('task-app-filter', '');
+  const [debouncedSearch, setDebouncedSearch] = React.useState(searchFilter);
 
   useEffect(() => {
     setSavedTasks(tasks);
@@ -94,9 +115,9 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedFilter(filter), 300);
+    const timer = setTimeout(() => setDebouncedSearch(searchFilter), 300);
     return () => clearTimeout(timer);
-  }, [filter]);
+  }, [searchFilter]);
 
   const handleAddTask = useCallback((title: string, dueDate?: string) => {
     const newTask: Task = {
@@ -122,13 +143,9 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
     dispatch(updateTask(updates));
   }, [dispatch]);
 
-  const handleFilterChange = useCallback((val: string) => {
-    setFilter(val);
-  }, [setFilter]);
-
   const handleSortChange = useCallback((val: string) => {
     setSortOption(val);
-  }, [setSortOption]);
+  }, []);
 
   const stats = useMemo(() => {
     const total = tasks.length;
@@ -144,19 +161,34 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
   }, [tasks]);
 
   const filteredAndSortedTasks = useMemo(() => {
-    let result = tasks.filter((task) =>
-      task.title.toLowerCase().includes(debouncedFilter.toLowerCase())
-    );
-    if (sortOption === 'due-date') {
-      result = [...result].sort((a, b) => {
-        if (!a.dueDate && !b.dueDate) return 0;
-        if (!a.dueDate) return 1;
-        if (!b.dueDate) return -1;
-        return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();
-      });
-    }
-    return result;
-  }, [tasks, debouncedFilter, sortOption]);
+    const filtered = tasks.filter((task) => {
+      const matchesSearch = task.title.toLowerCase().includes(debouncedSearch.toLowerCase());
+      const matchesFilter =
+        filter === 'all' ? true :
+        filter === 'active' ? !task.completed :
+        task.completed;
+      return matchesSearch && matchesFilter;
+    });
+
+    const sorted = [...filtered].sort((a, b) => {
+      if (sortOption === 'priority-high-low') {
+        return (PRIORITY_WEIGHT[b.priority] ?? 0) - (PRIORITY_WEIGHT[a.priority] ?? 0);
+      }
+      if (sortOption === 'priority-low-high') {
+        return (PRIORITY_WEIGHT[a.priority] ?? 0) - (PRIORITY_WEIGHT[b.priority] ?? 0);
+      }
+      if (sortOption === 'alphabetical') {
+        return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+      }
+      return 0;
+    });
+
+    return sorted;
+  }, [tasks, debouncedSearch, sortOption, filter]);
+
+  const countText = filter === 'all' && !debouncedSearch
+    ? `${filteredAndSortedTasks.length} Tasks`
+    : `Showing ${filteredAndSortedTasks.length} of ${tasks.length} tasks`;
 
   return (
     <div className="task-app-container" data-theme={theme}>
@@ -173,7 +205,7 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
       {showFilterBar && (
         <FilterBar
           filter={filter}
-          onFilterChange={handleFilterChange}
+          onFilterChange={setFilter}
           sortOption={sortOption}
           onSortChange={handleSortChange}
         />
@@ -181,11 +213,12 @@ function TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetai
       <ErrorBoundary>
         <TaskList
           tasks={filteredAndSortedTasks}
-          countText={`${filteredAndSortedTasks.length} Tasks`}
+          countText={countText}
           onToggle={handleToggleTask}
           onDelete={handleDeleteTask}
           onUpdate={handleUpdateTask}
           linkToTaskDetail={linkToTaskDetail}
+          emptyMessage={filter !== 'all' ? 'No tasks match this filter' : undefined}
         />
       </ErrorBoundary>
     </div>

@@ -874,17 +874,17 @@
   {
     "challengeId": "06-dynamic-routes",
     "challengeName": "Dynamic Routes",
-    "timestamp": "2026-03-21T11:50:09.655Z",
+    "timestamp": "2026-04-01T09:14:18.715Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
-      "architecture": 50,
+      "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 0,
-      "aiReview": 0
+      "aiReview": 88
     },
-    "totalScore": 65,
-    "passed": false,
+    "totalScore": 83.2,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
@@ -903,7 +903,7 @@
               "fullName": "Challenge 06: Dynamic Routes should have dynamic route segment [id] or [slug]",
               "status": "passed",
               "title": "should have dynamic route segment [id] or [slug]",
-              "duration": 1.426400000000001,
+              "duration": 2.017499999999984,
               "failureMessages": [],
               "location": {
                 "line": 11,
@@ -919,7 +919,7 @@
               "fullName": "Challenge 06: Dynamic Routes should use params in page component",
               "status": "passed",
               "title": "should use params in page component",
-              "duration": 0.5426999999999964,
+              "duration": 0.6751999999999612,
               "failureMessages": [],
               "location": {
                 "line": 17,
@@ -929,8 +929,8 @@
               "tags": []
             }
           ],
-          "startTime": 1774093810870,
-          "endTime": 1774093810871.5427,
+          "startTime": 1775034861581,
+          "endTime": 1775034861583.6753,
           "status": "passed",
           "message": "",
           "name": "C:/Users/DELL/Music/challenge-engine-react/courses/03-nextjs-app-router/project/tests/challenge-06.test.tsx"
@@ -944,23 +944,21 @@
       "details": []
     },
     "architectureResults": {
-      "score": 50,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "patternsFound": [
+        "dynamicSegment",
         "params"
       ],
-      "patternsMissing": [
-        "dynamicSegment"
-      ],
+      "patternsMissing": [],
       "details": [
         {
           "file": "app/posts/[id]/page.tsx",
           "patternsFound": [
+            "dynamicSegment",
             "params"
           ],
-          "patternsMissing": [
-            "dynamicSegment"
-          ]
+          "patternsMissing": []
         }
       ]
     },
@@ -980,27 +978,41 @@
     },
     "aiReviewResults": {
       "challengeId": "06-dynamic-routes",
-      "timestamp": "2026-03-21T11:51:23.797Z",
-      "score": 0,
+      "timestamp": "2026-04-01T09:14:30.378Z",
+      "score": 88,
       "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "fetch failed"
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript type annotations is excellent, making the code more maintainable and self-documenting.",
+        "The code is well-commented, making it easier for others to understand the functionality."
+      ],
+      "improvements": [
+        "Some of the variable names, such as `res` and `post`, could be more descriptive to improve code readability.",
+        "The `notFound` function is called multiple times in the code. Consider extracting it into a separate function to reduce code duplication.",
+        "The `generateStaticParams` function returns an array of objects with a single property. Consider using a more concise data structure, such as a tuple or an array of strings."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and follows best practices. However, there are some minor improvements that can be made to enhance code readability and reduce duplication."
     },
     "aiResults": {
       "challengeId": "06-dynamic-routes",
-      "timestamp": "2026-03-21T11:51:23.797Z",
-      "score": 0,
+      "timestamp": "2026-04-01T09:14:30.378Z",
+      "score": 88,
       "feedback": [],
-      "strengths": [],
-      "improvements": [],
-      "readability": 0,
-      "maintainability": 0,
-      "overall": "",
-      "error": "fetch failed"
+      "strengths": [
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript type annotations is excellent, making the code more maintainable and self-documenting.",
+        "The code is well-commented, making it easier for others to understand the functionality."
+      ],
+      "improvements": [
+        "Some of the variable names, such as `res` and `post`, could be more descriptive to improve code readability.",
+        "The `notFound` function is called multiple times in the code. Consider extracting it into a separate function to reduce code duplication.",
+        "The `generateStaticParams` function returns an array of objects with a single property. Consider using a more concise data structure, such as a tuple or an array of strings."
+      ],
+      "readability": 85,
+      "maintainability": 90,
+      "overall": "The code is well-structured, maintainable, and follows best practices. However, there are some minor improvements that can be made to enhance code readability and reduce duplication."
     }
   },
   {
@@ -1754,17 +1766,17 @@
   {
     "challengeId": "12-metadata-and-seo",
     "challengeName": "Metadata and SEO",
-    "timestamp": "2026-03-23T10:45:57.087Z",
+    "timestamp": "2026-04-01T13:54:32.882Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
-      "architecture": 33.3,
+      "architecture": 100,
       "bestPractices": 100,
       "e2eTests": 0,
       "aiReview": 88
     },
-    "totalScore": 76.53,
-    "passed": false,
+    "totalScore": 83.2,
+    "passed": true,
     "errors": [],
     "warnings": [],
     "testResults": {
@@ -1783,7 +1795,7 @@
               "fullName": "Challenge 12: Metadata and SEO should export metadata or generateMetadata with title/description",
               "status": "passed",
               "title": "should export metadata or generateMetadata with title/description",
-              "duration": 3.2708999999999833,
+              "duration": 4.9471000000000345,
               "failureMessages": [],
               "location": {
                 "line": 11,
@@ -1793,8 +1805,8 @@
               "tags": []
             }
           ],
-          "startTime": 1774262758525,
-          "endTime": 1774262758528.271,
+          "startTime": 1775051676667,
+          "endTime": 1775051676671.947,
           "status": "passed",
           "message": "",
           "name": "C:/Users/DELL/Music/challenge-engine-react/courses/03-nextjs-app-router/project/tests/challenge-12.test.tsx"
@@ -1808,18 +1820,17 @@
       "details": []
     },
     "architectureResults": {
-      "score": 33.3,
-      "passed": false,
+      "score": 100,
+      "passed": true,
       "patternsFound": [
         "metadata",
-        "generateMetadata"
-      ],
-      "patternsMissing": [
+        "generateMetadata",
         "metadata",
         "generateMetadata",
         "metadata",
         "generateMetadata"
       ],
+      "patternsMissing": [],
       "details": [
         {
           "file": "app/layout.tsx",
@@ -1831,19 +1842,19 @@
         },
         {
           "file": "app/page.tsx",
-          "patternsFound": [],
-          "patternsMissing": [
+          "patternsFound": [
             "metadata",
             "generateMetadata"
-          ]
+          ],
+          "patternsMissing": []
         },
         {
           "file": "app/posts/page.tsx",
-          "patternsFound": [],
-          "patternsMissing": [
+          "patternsFound": [
             "metadata",
             "generateMetadata"
-          ]
+          ],
+          "patternsMissing": []
         }
       ]
     },
@@ -1863,41 +1874,41 @@
     },
     "aiReviewResults": {
       "challengeId": "12-metadata-and-seo",
-      "timestamp": "2026-03-23T10:46:02.379Z",
+      "timestamp": "2026-04-01T13:54:44.109Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows the Next.js App Router conventions.",
-        "The use of TypeScript is consistent throughout the codebase.",
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and Next.js features such as `metadata` and `generateMetadata` is well-implemented.",
         "The code is free of console statements and passes ESLint."
       ],
       "improvements": [
-        "In the `app/posts/page.tsx` file, the `PostsPage` function is defined as an async function, but it's not clear why it's not using the `useEffect` hook to fetch the data. Consider refactoring to use `useEffect` for better code organization.",
-        "In the `app/layout.tsx` file, the `metadata` object is defined with `title` and `description` properties, but it's not clear why the `openGraph` property is also defined. Consider removing the `openGraph` property if it's not being used.",
-        "In the `app/page.tsx` file, the `dynamic` property is set to `'force-static'`, but it's not clear why it's not being used. Consider removing the `dynamic` property if it's not being used."
+        "Some of the functions and variables could be extracted into separate files to improve code organization and reusability.",
+        "The `PostsPage` function is quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `Suspense` could be improved by adding a loading indicator or a more informative message to the user."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured and follows the Next.js App Router conventions. However, there are some areas for improvement, such as refactoring the `PostsPage` function to use `useEffect` and removing unused properties. Overall, the code is maintainable and easy to read."
+      "overall": "The code is well-structured, maintainable, and effectively uses Next.js features. However, there are opportunities for improvement in code organization and user experience."
     },
     "aiResults": {
       "challengeId": "12-metadata-and-seo",
-      "timestamp": "2026-03-23T10:46:02.379Z",
+      "timestamp": "2026-04-01T13:54:44.109Z",
       "score": 88,
       "feedback": [],
       "strengths": [
-        "The code is well-structured and follows the Next.js App Router conventions.",
-        "The use of TypeScript is consistent throughout the codebase.",
+        "The code is well-structured and follows a consistent naming convention.",
+        "The use of TypeScript and Next.js features such as `metadata` and `generateMetadata` is well-implemented.",
         "The code is free of console statements and passes ESLint."
       ],
       "improvements": [
-        "In the `app/posts/page.tsx` file, the `PostsPage` function is defined as an async function, but it's not clear why it's not using the `useEffect` hook to fetch the data. Consider refactoring to use `useEffect` for better code organization.",
-        "In the `app/layout.tsx` file, the `metadata` object is defined with `title` and `description` properties, but it's not clear why the `openGraph` property is also defined. Consider removing the `openGraph` property if it's not being used.",
-        "In the `app/page.tsx` file, the `dynamic` property is set to `'force-static'`, but it's not clear why it's not being used. Consider removing the `dynamic` property if it's not being used."
+        "Some of the functions and variables could be extracted into separate files to improve code organization and reusability.",
+        "The `PostsPage` function is quite long and could be broken down into smaller, more manageable functions.",
+        "The use of `Suspense` could be improved by adding a loading indicator or a more informative message to the user."
       ],
       "readability": 85,
       "maintainability": 90,
-      "overall": "The code is well-structured and follows the Next.js App Router conventions. However, there are some areas for improvement, such as refactoring the `PostsPage` function to use `useEffect` and removing unused properties. Overall, the code is maintainable and easy to read."
+      "overall": "The code is well-structured, maintainable, and effectively uses Next.js features. However, there are opportunities for improvement in code organization and user experience."
     }
   },
   {
