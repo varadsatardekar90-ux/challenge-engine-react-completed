@@ -322,29 +322,6 @@
     }
   },
   {
-    "challengeId": "17-fullstack-capstone",
-    "challengeName": "Fullstack Capstone",
-    "aiReview": {
-      "challengeId": "17-fullstack-capstone",
-      "timestamp": "2026-03-28T09:11:31.816Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-organized and follows a consistent structure.",
-        "The use of TypeScript and Next.js features such as dynamic routing and metadata generation is well-implemented.",
-        "The code includes a Client Component (LikeButton) and error handling mechanisms."
-      ],
-      "improvements": [
-        "Some of the code duplication can be avoided by extracting common logic into separate functions.",
-        "The error handling mechanism in the PostPage component can be improved by providing more specific error messages.",
-        "The LikeButton component can be improved by adding more interactive features and handling user input."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and effectively implements multiple Next.js features. However, there are some areas for improvement to enhance maintainability and user experience."
-    }
-  },
-  {
     "challengeId": "06-dynamic-routes",
     "challengeName": "Dynamic Routes",
     "aiReview": {
@@ -388,6 +365,22 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The code is well-structured, maintainable, and effectively uses Next.js features. However, there are opportunities for improvement in code organization and user experience."
+    }
+  },
+  {
+    "challengeId": "17-fullstack-capstone",
+    "challengeName": "Fullstack Capstone",
+    "aiReview": {
+      "challengeId": "17-fullstack-capstone",
+      "timestamp": "2026-05-12T09:03:52.961Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     }
   }
 ]

@@ -2568,17 +2568,17 @@
   {
     "challengeId": "17-fullstack-capstone",
     "challengeName": "Fullstack Capstone",
-    "timestamp": "2026-03-28T09:11:26.134Z",
+    "timestamp": "2026-05-12T09:03:38.790Z",
     "scores": {
       "functionalTests": 100,
       "codeQuality": 100,
       "architecture": 75,
       "bestPractices": 100,
       "e2eTests": 0,
-      "aiReview": 88
+      "aiReview": 0
     },
-    "totalScore": 80.7,
-    "passed": true,
+    "totalScore": 67.5,
+    "passed": false,
     "errors": [],
     "warnings": [],
     "testResults": {
@@ -2597,7 +2597,7 @@
               "fullName": "Challenge 17: Fullstack Capstone should have dynamic route page",
               "status": "passed",
               "title": "should have dynamic route page",
-              "duration": 1.9465999999999894,
+              "duration": 1.911799999999971,
               "failureMessages": [],
               "location": {
                 "line": 12,
@@ -2613,7 +2613,7 @@
               "fullName": "Challenge 17: Fullstack Capstone should have error.tsx or not-found.tsx",
               "status": "passed",
               "title": "should have error.tsx or not-found.tsx",
-              "duration": 0.3423999999999978,
+              "duration": 0.39560000000000173,
               "failureMessages": [],
               "location": {
                 "line": 16,
@@ -2629,7 +2629,7 @@
               "fullName": "Challenge 17: Fullstack Capstone should have metadata or generateMetadata on dynamic page",
               "status": "passed",
               "title": "should have metadata or generateMetadata on dynamic page",
-              "duration": 0.5224000000000046,
+              "duration": 0.8484999999999445,
               "failureMessages": [],
               "location": {
                 "line": 22,
@@ -2639,8 +2639,8 @@
               "tags": []
             }
           ],
-          "startTime": 1774689087912,
-          "endTime": 1774689087914.5225,
+          "startTime": 1778576620663,
+          "endTime": 1778576620666.8484,
           "status": "passed",
           "message": "",
           "name": "C:/Users/DELL/Music/challenge-engine-react/courses/03-nextjs-app-router/project/tests/challenge-17.test.tsx"
@@ -2722,41 +2722,27 @@
     },
     "aiReviewResults": {
       "challengeId": "17-fullstack-capstone",
-      "timestamp": "2026-03-28T09:11:31.816Z",
-      "score": 88,
+      "timestamp": "2026-05-12T09:03:52.961Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-organized and follows a consistent structure.",
-        "The use of TypeScript and Next.js features such as dynamic routing and metadata generation is well-implemented.",
-        "The code includes a Client Component (LikeButton) and error handling mechanisms."
-      ],
-      "improvements": [
-        "Some of the code duplication can be avoided by extracting common logic into separate functions.",
-        "The error handling mechanism in the PostPage component can be improved by providing more specific error messages.",
-        "The LikeButton component can be improved by adding more interactive features and handling user input."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and effectively implements multiple Next.js features. However, there are some areas for improvement to enhance maintainability and user experience."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     },
     "aiResults": {
       "challengeId": "17-fullstack-capstone",
-      "timestamp": "2026-03-28T09:11:31.816Z",
-      "score": 88,
+      "timestamp": "2026-05-12T09:03:52.961Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-organized and follows a consistent structure.",
-        "The use of TypeScript and Next.js features such as dynamic routing and metadata generation is well-implemented.",
-        "The code includes a Client Component (LikeButton) and error handling mechanisms."
-      ],
-      "improvements": [
-        "Some of the code duplication can be avoided by extracting common logic into separate functions.",
-        "The error handling mechanism in the PostPage component can be improved by providing more specific error messages.",
-        "The LikeButton component can be improved by adding more interactive features and handling user input."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and effectively implements multiple Next.js features. However, there are some areas for improvement to enhance maintainability and user experience."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     }
   }
 ]
