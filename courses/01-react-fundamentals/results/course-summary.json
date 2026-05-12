@@ -1,11 +1,11 @@
 {
   "courseId": "01-react-fundamentals",
   "courseName": "React Fundamentals",
-  "lastUpdated": "2026-04-01T09:05:21.690Z",
+  "lastUpdated": "2026-05-12T09:14:53.959Z",
   "totalChallenges": 23,
-  "completedChallenges": 23,
-  "averageScore": 86.2,
-  "completionPercentage": 100,
+  "completedChallenges": 22,
+  "averageScore": 83.4,
+  "completionPercentage": 95.7,
   "badgeLevel": "silver",
   "challengeResults": [
     {
@@ -143,8 +143,8 @@
     {
       "challengeId": "23-useref-focus-management",
       "challengeName": "useRef - Focus Management",
-      "score": 87.59500000000001,
-      "passed": true
+      "score": 22.37,
+      "passed": false
     }
   ],
   "skillStrengths": [
@@ -169,8 +169,9 @@
     "Performance Optimization",
     "Error Boundaries and Error Handling",
     "React Router - Routing and Navigation",
-    "Data Fetching - Loading and Error State",
-    "useRef - Focus Management"
+    "Data Fetching - Loading and Error State"
   ],
-  "improvementAreas": []
+  "improvementAreas": [
+    "useRef - Focus Management"
+  ]
 }

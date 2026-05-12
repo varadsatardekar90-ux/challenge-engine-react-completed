@@ -410,29 +410,6 @@
     }
   },
   {
-    "challengeId": "23-useref-focus-management",
-    "challengeName": "useRef - Focus Management",
-    "aiReview": {
-      "challengeId": "23-useref-focus-management",
-      "timestamp": "2026-03-12T11:22:13.817Z",
-      "score": 88,
-      "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
-        "The code is well-documented with clear and concise comments."
-      ],
-      "improvements": [
-        "The `useEffect` hook in `FilterBar.tsx` is not necessary as the `ref` is already attached to the input element. Instead, use the `useRef` hook to create a ref and then use the `focus` method on the ref in the `useEffect` hook.",
-        "In `TaskApp.tsx`, the `useEffect` hook is used to update the `tasks` state when the component mounts. However, this can be optimized by using the `useCallback` hook to memoize the `dispatch` function and then use the `useEffect` hook with an empty dependency array.",
-        "In `TaskApp.tsx`, the `useMemo` hook is used to calculate the `filteredAndSortedTasks` array. However, this can be optimized by using the `useCallback` hook to memoize the `filteredAndSortedTasks` function and then use the `useMemo` hook with an empty dependency array."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, but there are some areas for improvement to optimize performance and reduce unnecessary re-renders. With some minor adjustments, the code can be even more efficient and scalable."
-    }
-  },
-  {
     "challengeId": "05-task-deletion",
     "challengeName": "Task Deletion",
     "aiReview": {
@@ -522,6 +499,22 @@
       "readability": 85,
       "maintainability": 90,
       "overall": "The codebase demonstrates a good understanding of React, TypeScript, and functional programming principles. However, there are areas for improvement, particularly in terms of input validation, error handling, and code organization. With some refinements, the codebase can become even more maintainable and efficient."
+    }
+  },
+  {
+    "challengeId": "23-useref-focus-management",
+    "challengeName": "useRef - Focus Management",
+    "aiReview": {
+      "challengeId": "23-useref-focus-management",
+      "timestamp": "2026-05-12T09:14:53.957Z",
+      "score": 0,
+      "feedback": [],
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     }
   }
 ]

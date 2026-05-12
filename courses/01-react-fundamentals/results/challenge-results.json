@@ -10552,25 +10552,25 @@
   {
     "challengeId": "23-useref-focus-management",
     "challengeName": "useRef - Focus Management",
-    "timestamp": "2026-03-12T11:21:09.088Z",
+    "timestamp": "2026-05-12T09:13:24.281Z",
     "scores": {
-      "functionalTests": 100,
-      "codeQuality": 96,
-      "architecture": 100,
+      "functionalTests": 0,
+      "codeQuality": 38,
+      "architecture": 66.7,
       "bestPractices": 100,
-      "e2eTests": 33.3,
-      "aiReview": 88
+      "e2eTests": 0,
+      "aiReview": 0
     },
-    "totalScore": 87.59500000000001,
-    "passed": true,
+    "totalScore": 22.37,
+    "passed": false,
     "errors": [],
     "warnings": [],
     "testResults": {
-      "score": 100,
-      "passed": true,
+      "score": 0,
+      "passed": false,
       "totalTests": 2,
-      "passedTests": 2,
-      "failedTests": 0,
+      "passedTests": 0,
+      "failedTests": 2,
       "details": [
         {
           "assertionResults": [
@@ -10580,10 +10580,16 @@
                 "Challenge 23: useRef - Focus Management"
               ],
               "fullName": " Challenge 23: useRef - Focus Management FilterBar should render search input with id search-input",
-              "status": "passed",
+              "status": "failed",
               "title": "FilterBar should render search input with id search-input",
-              "duration": 20,
-              "failureMessages": []
+              "duration": 33,
+              "failureMessages": [
+                "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+              ],
+              "location": {
+                "line": 28478,
+                "column": 17
+              }
             },
             {
               "ancestorTitles": [
@@ -10591,26 +10597,33 @@
                 "Challenge 23: useRef - Focus Management"
               ],
               "fullName": " Challenge 23: useRef - Focus Management FilterBar should be focusable for search input",
-              "status": "passed",
+              "status": "failed",
               "title": "FilterBar should be focusable for search input",
-              "duration": 3,
-              "failureMessages": []
+              "duration": 4,
+              "failureMessages": [
+                "Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports."
+              ],
+              "location": {
+                "line": 28478,
+                "column": 17
+              }
             }
           ],
-          "startTime": 1773314474060,
-          "endTime": 1773314474083,
-          "status": "passed",
+          "startTime": 1778577210733,
+          "endTime": 1778577210770,
+          "status": "failed",
           "message": "",
           "name": "C:/Users/DELL/Music/challenge-engine-react/courses/01-react-fundamentals/project/tests/challenge-23.test.tsx"
         }
-      ]
+      ],
+      "error": "Command failed: npm test -- C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\challenge-23.test.tsx --run --reporter=json"
     },
     "lintResults": {
-      "score": 96,
-      "passed": true,
-      "totalIssues": 2,
-      "errors": 0,
-      "warnings": 2,
+      "score": 38,
+      "passed": false,
+      "totalIssues": 7,
+      "errors": 6,
+      "warnings": 1,
       "details": [
         {
           "filePath": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\App.tsx",
@@ -10656,43 +10669,87 @@
           "filePath": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\src\\components\\TaskApp.tsx",
           "messages": [
             {
-              "ruleId": "react-hooks/exhaustive-deps",
-              "severity": 1,
-              "message": "React Hook useEffect has a missing dependency: 'setSavedTasks'. Either include it or remove the dependency array.",
-              "line": 90,
-              "column": 6,
-              "nodeType": "ArrayExpression",
-              "endLine": 90,
-              "endColumn": 13,
-              "suggestions": [
-                {
-                  "desc": "Update the dependencies array to be: [setSavedTasks, tasks]",
-                  "fix": {
-                    "range": [
-                      3067,
-                      3074
-                    ],
-                    "text": "[setSavedTasks, tasks]"
-                  }
-                }
-              ]
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_tasks' is defined but never used.",
+              "line": 95,
+              "column": 10,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 95,
+              "endColumn": 16
+            },
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_setTasks' is defined but never used.",
+              "line": 96,
+              "column": 13,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 96,
+              "endColumn": 22
+            },
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_showForm' is defined but never used.",
+              "line": 97,
+              "column": 13,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 97,
+              "endColumn": 22
+            },
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_countFormat' is defined but never used.",
+              "line": 98,
+              "column": 16,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 98,
+              "endColumn": 28
+            },
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'_onDelete' is defined but never used.",
+              "line": 99,
+              "column": 13,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 99,
+              "endColumn": 22
+            },
+            {
+              "ruleId": "@typescript-eslint/no-unused-vars",
+              "severity": 2,
+              "message": "'setSearchFilter' is assigned a value but never used.",
+              "line": 106,
+              "column": 24,
+              "nodeType": "Identifier",
+              "messageId": "unusedVar",
+              "endLine": 106,
+              "endColumn": 39
             },
             {
               "ruleId": "react-hooks/exhaustive-deps",
               "severity": 1,
               "message": "React Hook useEffect has a missing dependency: 'savedTasks'. Either include it or remove the dependency array.",
-              "line": 94,
+              "line": 115,
               "column": 6,
               "nodeType": "ArrayExpression",
-              "endLine": 94,
+              "endLine": 115,
               "endColumn": 8,
               "suggestions": [
                 {
                   "desc": "Update the dependencies array to be: [savedTasks]",
                   "fix": {
                     "range": [
-                      3149,
-                      3151
+                      3809,
+                      3811
                     ],
                     "text": "[savedTasks]"
                   }
@@ -10701,12 +10758,12 @@
             }
           ],
           "suppressedMessages": [],
-          "errorCount": 0,
+          "errorCount": 6,
           "fatalErrorCount": 0,
-          "warningCount": 2,
+          "warningCount": 1,
           "fixableErrorCount": 0,
           "fixableWarningCount": 0,
-          "source": "import React, { useEffect, useMemo, useReducer, useCallback } from 'react';\r\nimport TaskForm from './TaskForm';\r\nimport FilterBar from './FilterBar';\r\nimport TaskList from './TaskList';\r\nimport StatsPanel from './StatsPanel';\r\nimport ErrorBoundary from './ErrorBoundary';\r\nimport { useTheme, useLocalStorage } from '../contexts/ThemeContext';\r\n\r\ninterface Task {\r\n  id: number;\r\n  title: string;\r\n  description: string;\r\n  priority: string;\r\n  completed: boolean;\r\n  category?: string;\r\n  tags?: string[];\r\n  dueDate?: string;\r\n}\r\n\r\nconst ADD_TASK = 'ADD_TASK';\r\nconst UPDATE_TASK = 'UPDATE_TASK';\r\nconst DELETE_TASK = 'DELETE_TASK';\r\nconst TOGGLE_TASK = 'TOGGLE_TASK';\r\nconst SET_TASKS = 'SET_TASKS';\r\n\r\ntype Action =\r\n  | { type: typeof ADD_TASK; payload: Task }\r\n  | { type: typeof UPDATE_TASK; payload: Partial<Task> & { id: number } }\r\n  | { type: typeof DELETE_TASK; payload: number }\r\n  | { type: typeof TOGGLE_TASK; payload: number }\r\n  | { type: typeof SET_TASKS; payload: Task[] };\r\n\r\nconst addTask = (task: Task): Action => ({ type: ADD_TASK, payload: task });\r\nconst updateTask = (updates: Partial<Task> & { id: number }): Action => ({ type: UPDATE_TASK, payload: updates });\r\nconst deleteTask = (id: number): Action => ({ type: DELETE_TASK, payload: id });\r\nconst toggleTask = (id: number): Action => ({ type: TOGGLE_TASK, payload: id });\r\nconst setTasksAction = (tasks: Task[]): Action => ({ type: SET_TASKS, payload: tasks });\r\n\r\nfunction taskReducer(state: Task[], action: Action): Task[] {\r\n  switch (action.type) {\r\n    case ADD_TASK:\r\n      return [...state, action.payload];\r\n    case UPDATE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload.id ? { ...t, ...action.payload } : t\r\n      );\r\n    case DELETE_TASK:\r\n      return state.filter((t) => t.id !== action.payload);\r\n    case TOGGLE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload ? { ...t, completed: !t.completed } : t\r\n      );\r\n    case SET_TASKS:\r\n      return action.payload;\r\n    default:\r\n      return state;\r\n  }\r\n}\r\n\r\ninterface TaskAppProps {\r\n  showStatsPanel?: boolean;\r\n  showFilterBar?: boolean;\r\n  linkToTaskDetail?: boolean;\r\n}\r\n\r\nfunction ThemeToggle() {\r\n  const { theme, toggleTheme } = useTheme();\r\n  return (\r\n    <button\r\n      id=\"theme-toggle\"\r\n      onClick={toggleTheme}\r\n      className=\"theme-toggle-btn\"\r\n      aria-label=\"Toggle theme\"\r\n    >\r\n      {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}\r\n    </button>\r\n  );\r\n}\r\n\r\nfunction TaskApp({ showStatsPanel = false, showFilterBar = true, linkToTaskDetail = false }: TaskAppProps) {\r\n  const { theme } = useTheme();\r\n  const [savedTasks, setSavedTasks] = useLocalStorage<Task[]>('task-app-tasks', []);\r\n  const [tasks, dispatch] = useReducer(taskReducer, savedTasks);\r\n  const [filter, setFilter] = useLocalStorage<string>('task-app-filter', '');\r\n  const [sortOption, setSortOption] = useLocalStorage<string>('task-app-sort', '');\r\n  const [debouncedFilter, setDebouncedFilter] = React.useState(filter);\r\n\r\n  useEffect(() => {\r\n    setSavedTasks(tasks);\r\n  }, [tasks]);\r\n\r\n  useEffect(() => {\r\n    dispatch(setTasksAction(savedTasks));\r\n  }, []);\r\n\r\n  useEffect(() => {\r\n    const timer = setTimeout(() => setDebouncedFilter(filter), 300);\r\n    return () => clearTimeout(timer);\r\n  }, [filter]);\r\n\r\n  const handleAddTask = useCallback((title: string, dueDate?: string) => {\r\n    const newTask: Task = {\r\n      id: Date.now(),\r\n      title,\r\n      description: '',\r\n      priority: 'High',\r\n      completed: false,\r\n      dueDate,\r\n    };\r\n    dispatch(addTask(newTask));\r\n  }, [dispatch]);\r\n\r\n  const handleToggleTask = useCallback((id: number) => {\r\n    dispatch(toggleTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleDeleteTask = useCallback((id: number) => {\r\n    dispatch(deleteTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleUpdateTask = useCallback((updates: Partial<Task> & { id: number }) => {\r\n    dispatch(updateTask(updates));\r\n  }, [dispatch]);\r\n\r\n  const handleFilterChange = useCallback((val: string) => {\r\n    setFilter(val);\r\n  }, [setFilter]);\r\n\r\n  const handleSortChange = useCallback((val: string) => {\r\n    setSortOption(val);\r\n  }, [setSortOption]);\r\n\r\n  const stats = useMemo(() => {\r\n    const total = tasks.length;\r\n    const completed = tasks.filter((t) => t.completed).length;\r\n    const active = tasks.filter((t) => !t.completed).length;\r\n    const today = new Date();\r\n    today.setHours(0, 0, 0, 0);\r\n    const overdue = tasks.filter((t) => {\r\n      if (t.completed || !t.dueDate) return false;\r\n      return new Date(t.dueDate) < today;\r\n    }).length;\r\n    return { total, completed, active, overdue };\r\n  }, [tasks]);\r\n\r\n  const filteredAndSortedTasks = useMemo(() => {\r\n    let result = tasks.filter((task) =>\r\n      task.title.toLowerCase().includes(debouncedFilter.toLowerCase())\r\n    );\r\n    if (sortOption === 'due-date') {\r\n      result = [...result].sort((a, b) => {\r\n        if (!a.dueDate && !b.dueDate) return 0;\r\n        if (!a.dueDate) return 1;\r\n        if (!b.dueDate) return -1;\r\n        return new Date(a.dueDate).getTime() - new Date(b.dueDate).getTime();\r\n      });\r\n    }\r\n    return result;\r\n  }, [tasks, debouncedFilter, sortOption]);\r\n\r\n  return (\r\n    <div className=\"task-app-container\" data-theme={theme}>\r\n      <ThemeToggle />\r\n      {showStatsPanel && (\r\n        <StatsPanel\r\n          total={stats.total}\r\n          completed={stats.completed}\r\n          active={stats.active}\r\n          overdue={stats.overdue}\r\n        />\r\n      )}\r\n      <TaskForm onAdd={handleAddTask} />\r\n      {showFilterBar && (\r\n        <FilterBar\r\n          filter={filter}\r\n          onFilterChange={handleFilterChange}\r\n          sortOption={sortOption}\r\n          onSortChange={handleSortChange}\r\n        />\r\n      )}\r\n      <ErrorBoundary>\r\n        <TaskList\r\n          tasks={filteredAndSortedTasks}\r\n          countText={`${filteredAndSortedTasks.length} Tasks`}\r\n          onToggle={handleToggleTask}\r\n          onDelete={handleDeleteTask}\r\n          onUpdate={handleUpdateTask}\r\n          linkToTaskDetail={linkToTaskDetail}\r\n        />\r\n      </ErrorBoundary>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default TaskApp;",
+          "source": "import React, { useEffect, useMemo, useReducer, useCallback, useState } from 'react';\r\nimport TaskForm from './TaskForm';\r\nimport FilterBar from './FilterBar';\r\nimport TaskList from './TaskList';\r\nimport StatsPanel from './StatsPanel';\r\nimport ErrorBoundary from './ErrorBoundary';\r\nimport { useTheme, useLocalStorage } from '../contexts/ThemeContext';\r\n\r\ninterface Task {\r\n  id: number;\r\n  title: string;\r\n  description: string;\r\n  priority: string;\r\n  completed: boolean;\r\n  category?: string;\r\n  tags?: string[];\r\n  dueDate?: string;\r\n}\r\n\r\nconst ADD_TASK = 'ADD_TASK';\r\nconst UPDATE_TASK = 'UPDATE_TASK';\r\nconst DELETE_TASK = 'DELETE_TASK';\r\nconst TOGGLE_TASK = 'TOGGLE_TASK';\r\nconst SET_TASKS = 'SET_TASKS';\r\n\r\ntype Action =\r\n  | { type: typeof ADD_TASK; payload: Task }\r\n  | { type: typeof UPDATE_TASK; payload: Partial<Task> & { id: number } }\r\n  | { type: typeof DELETE_TASK; payload: number }\r\n  | { type: typeof TOGGLE_TASK; payload: number }\r\n  | { type: typeof SET_TASKS; payload: Task[] };\r\n\r\nconst addTask = (task: Task): Action => ({ type: ADD_TASK, payload: task });\r\nconst updateTask = (updates: Partial<Task> & { id: number }): Action => ({ type: UPDATE_TASK, payload: updates });\r\nconst deleteTask = (id: number): Action => ({ type: DELETE_TASK, payload: id });\r\nconst toggleTask = (id: number): Action => ({ type: TOGGLE_TASK, payload: id });\r\nconst setTasksAction = (tasks: Task[]): Action => ({ type: SET_TASKS, payload: tasks });\r\n\r\nconst PRIORITY_WEIGHT: Record<string, number> = { High: 3, Medium: 2, Low: 1 };\r\n\r\nfunction taskReducer(state: Task[], action: Action): Task[] {\r\n  switch (action.type) {\r\n    case ADD_TASK:\r\n      return [...state, action.payload];\r\n    case UPDATE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload.id ? { ...t, ...action.payload } : t\r\n      );\r\n    case DELETE_TASK:\r\n      return state.filter((t) => t.id !== action.payload);\r\n    case TOGGLE_TASK:\r\n      return state.map((t) =>\r\n        t.id === action.payload ? { ...t, completed: !t.completed } : t\r\n      );\r\n    case SET_TASKS:\r\n      return action.payload;\r\n    default:\r\n      return state;\r\n  }\r\n}\r\n\r\ninterface TaskAppProps {\r\n  // Internal props\r\n  showStatsPanel?: boolean;\r\n  showFilterBar?: boolean;\r\n  linkToTaskDetail?: boolean;\r\n  // Legacy props from App.tsx (accepted but managed internally)\r\n  tasks?: Task[];\r\n  setTasks?: React.Dispatch<React.SetStateAction<Task[]>>;\r\n  showForm?: boolean;\r\n  countFormat?: string;\r\n  onDelete?: (id: string | number) => void;\r\n}\r\n\r\nfunction ThemeToggle() {\r\n  const { theme, toggleTheme } = useTheme();\r\n  return (\r\n    <button\r\n      id=\"theme-toggle\"\r\n      onClick={toggleTheme}\r\n      className=\"theme-toggle-btn\"\r\n      aria-label=\"Toggle theme\"\r\n    >\r\n      {theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode'}\r\n    </button>\r\n  );\r\n}\r\n\r\ntype FilterOption = 'all' | 'active' | 'completed';\r\n\r\nfunction TaskApp({\r\n  showStatsPanel = false,\r\n  showFilterBar = true,\r\n  linkToTaskDetail = false,\r\n  tasks: _tasks,\r\n  setTasks: _setTasks,\r\n  showForm: _showForm,\r\n  countFormat: _countFormat,\r\n  onDelete: _onDelete,\r\n}: TaskAppProps) {\r\n  const { theme } = useTheme();\r\n  const [savedTasks, setSavedTasks] = useLocalStorage<Task[]>('task-app-tasks', []);\r\n  const [tasks, dispatch] = useReducer(taskReducer, savedTasks);\r\n  const [filter, setFilter] = useState<FilterOption>('all');\r\n  const [sortOption, setSortOption] = useState<string>('');\r\n  const [searchFilter, setSearchFilter] = useLocalStorage<string>('task-app-filter', '');\r\n  const [debouncedSearch, setDebouncedSearch] = React.useState(searchFilter);\r\n\r\n  useEffect(() => {\r\n    setSavedTasks(tasks);\r\n  }, [tasks, setSavedTasks]);\r\n\r\n  useEffect(() => {\r\n    dispatch(setTasksAction(savedTasks)); // eslint-disable-line react-hooks/exhaustive-deps\r\n  }, []);\r\n\r\n  useEffect(() => {\r\n    const timer = setTimeout(() => setDebouncedSearch(searchFilter), 300);\r\n    return () => clearTimeout(timer);\r\n  }, [searchFilter]);\r\n\r\n  const handleAddTask = useCallback((title: string, dueDate?: string) => {\r\n    const newTask: Task = {\r\n      id: Date.now(),\r\n      title,\r\n      description: '',\r\n      priority: 'High',\r\n      completed: false,\r\n      dueDate,\r\n    };\r\n    dispatch(addTask(newTask));\r\n  }, [dispatch]);\r\n\r\n  const handleToggleTask = useCallback((id: number) => {\r\n    dispatch(toggleTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleDeleteTask = useCallback((id: number) => {\r\n    dispatch(deleteTask(id));\r\n  }, [dispatch]);\r\n\r\n  const handleUpdateTask = useCallback((updates: Partial<Task> & { id: number }) => {\r\n    dispatch(updateTask(updates));\r\n  }, [dispatch]);\r\n\r\n  const handleSortChange = useCallback((val: string) => {\r\n    setSortOption(val);\r\n  }, []);\r\n\r\n  const stats = useMemo(() => {\r\n    const total = tasks.length;\r\n    const completed = tasks.filter((t) => t.completed).length;\r\n    const active = tasks.filter((t) => !t.completed).length;\r\n    const today = new Date();\r\n    today.setHours(0, 0, 0, 0);\r\n    const overdue = tasks.filter((t) => {\r\n      if (t.completed || !t.dueDate) return false;\r\n      return new Date(t.dueDate) < today;\r\n    }).length;\r\n    return { total, completed, active, overdue };\r\n  }, [tasks]);\r\n\r\n  const filteredAndSortedTasks = useMemo(() => {\r\n    const filtered = tasks.filter((task) => {\r\n      const matchesSearch = task.title.toLowerCase().includes(debouncedSearch.toLowerCase());\r\n      const matchesFilter =\r\n        filter === 'all' ? true :\r\n        filter === 'active' ? !task.completed :\r\n        task.completed;\r\n      return matchesSearch && matchesFilter;\r\n    });\r\n\r\n    const sorted = [...filtered].sort((a, b) => {\r\n      if (sortOption === 'priority-high-low') {\r\n        return (PRIORITY_WEIGHT[b.priority] ?? 0) - (PRIORITY_WEIGHT[a.priority] ?? 0);\r\n      }\r\n      if (sortOption === 'priority-low-high') {\r\n        return (PRIORITY_WEIGHT[a.priority] ?? 0) - (PRIORITY_WEIGHT[b.priority] ?? 0);\r\n      }\r\n      if (sortOption === 'alphabetical') {\r\n        return a.title.toLowerCase().localeCompare(b.title.toLowerCase());\r\n      }\r\n      return 0;\r\n    });\r\n\r\n    return sorted;\r\n  }, [tasks, debouncedSearch, sortOption, filter]);\r\n\r\n  const countText = filter === 'all' && !debouncedSearch\r\n    ? `${filteredAndSortedTasks.length} Tasks`\r\n    : `Showing ${filteredAndSortedTasks.length} of ${tasks.length} tasks`;\r\n\r\n  return (\r\n    <div className=\"task-app-container\" data-theme={theme}>\r\n      <ThemeToggle />\r\n      {showStatsPanel && (\r\n        <StatsPanel\r\n          total={stats.total}\r\n          completed={stats.completed}\r\n          active={stats.active}\r\n          overdue={stats.overdue}\r\n        />\r\n      )}\r\n      <TaskForm onAdd={handleAddTask} />\r\n      {showFilterBar && (\r\n        <FilterBar\r\n          filter={filter}\r\n          onFilterChange={setFilter}\r\n          sortOption={sortOption}\r\n          onSortChange={handleSortChange}\r\n        />\r\n      )}\r\n      <ErrorBoundary>\r\n        <TaskList\r\n          tasks={filteredAndSortedTasks}\r\n          countText={countText}\r\n          onToggle={handleToggleTask}\r\n          onDelete={handleDeleteTask}\r\n          onUpdate={handleUpdateTask}\r\n          linkToTaskDetail={linkToTaskDetail}\r\n          emptyMessage={filter !== 'all' ? 'No tasks match this filter' : undefined}\r\n        />\r\n      </ErrorBoundary>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default TaskApp;",
           "usedDeprecatedRules": [
             {
               "ruleId": "no-extra-semi",
@@ -10721,23 +10778,23 @@
       ]
     },
     "architectureResults": {
-      "score": 100,
-      "passed": true,
+      "score": 66.7,
+      "passed": false,
       "patternsFound": [
         "functionalComponent",
-        "props",
+        "props"
+      ],
+      "patternsMissing": [
         "useRef"
       ],
-      "patternsMissing": [],
       "details": [
         {
           "file": "src/components/FilterBar.tsx",
-          "patternsFound": [
-            "functionalComponent",
-            "useRef"
-          ],
+          "patternsFound": [],
           "patternsMissing": [
-            "props"
+            "functionalComponent",
+            "props",
+            "useRef"
           ]
         },
         {
@@ -10770,10 +10827,10 @@
       "note": "No best practices requirements specified in challenge"
     },
     "e2eResults": {
-      "score": 33.3,
+      "score": 0,
       "totalTests": 3,
-      "passedTests": 1,
-      "failedTests": 2,
+      "passedTests": 0,
+      "failedTests": 3,
       "details": [
         {
           "title": "challenge-23.spec.ts",
@@ -10804,7 +10861,7 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5633,
+                          "duration": 5988,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:9:46",
@@ -10828,18 +10885,13 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-12T11:21:27.159Z",
+                          "startTime": "2026-05-12T09:13:42.213Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium\\error-context.md"
                             }
                           ],
                           "errorLocation": {
@@ -10852,7 +10904,7 @@
                           "workerIndex": 1,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5663,
+                          "duration": 5689,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:9:46",
@@ -10876,18 +10928,13 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-03-12T11:21:35.414Z",
+                          "startTime": "2026-05-12T09:13:53.458Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium-retry1\\error-context.md"
                             },
                             {
                               "name": "trace",
@@ -10905,7 +10952,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5440,
+                          "duration": 5508,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#task-list')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#task-list')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:9:46",
@@ -10929,18 +10976,13 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-03-12T11:21:43.591Z",
+                          "startTime": "2026-05-12T09:14:01.960Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--451eb-2E-should-display-task-list-chromium-retry2\\error-context.md"
                             }
                           ],
                           "errorLocation": {
@@ -10960,7 +11002,7 @@
                 },
                 {
                   "title": "should display filter bar with search input",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
@@ -10973,18 +11015,139 @@
                         {
                           "workerIndex": 3,
                           "parallelIndex": 0,
-                          "status": "passed",
-                          "duration": 511,
-                          "errors": [],
+                          "status": "failed",
+                          "duration": 5387,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81",
+                            "location": {
+                              "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                              "column": 81,
+                              "line": 13
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should display filter bar with search input'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#filter-bar'\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                                "column": 81,
+                                "line": 13
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n\n  11 |\n  12 |   test('should display filter bar with search input', async ({ page }) => {\n> 13 |     await expect(page.locator('#filter-bar').or(page.locator('#search-input'))).toBeVisible();\n     |                                                                                 ^\n  14 |   });\n  15 |\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81"
+                            }
+                          ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-12T11:21:51.240Z",
+                          "startTime": "2026-05-12T09:14:10.075Z",
                           "annotations": [],
-                          "attachments": []
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--c0b29-ilter-bar-with-search-input-chromium\\test-failed-1.png"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                            "column": 81,
+                            "line": 13
+                          }
+                        },
+                        {
+                          "workerIndex": 4,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 5475,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81",
+                            "location": {
+                              "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                              "column": 81,
+                              "line": 13
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should display filter bar with search input'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#filter-bar'\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                                "column": 81,
+                                "line": 13
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n\n  11 |\n  12 |   test('should display filter bar with search input', async ({ page }) => {\n> 13 |     await expect(page.locator('#filter-bar').or(page.locator('#search-input'))).toBeVisible();\n     |                                                                                 ^\n  14 |   });\n  15 |\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-12T09:14:17.537Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--c0b29-ilter-bar-with-search-input-chromium-retry1\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--c0b29-ilter-bar-with-search-input-chromium-retry1\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                            "column": 81,
+                            "line": 13
+                          }
+                        },
+                        {
+                          "workerIndex": 5,
+                          "parallelIndex": 0,
+                          "status": "failed",
+                          "duration": 5332,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81",
+                            "location": {
+                              "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                              "column": 81,
+                              "line": 13
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should display filter bar with search input'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#filter-bar'\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                                "column": 81,
+                                "line": 13
+                              },
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#filter-bar').or(locator('#search-input'))\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#filter-bar').or(locator('#search-input'))\u001b[22m\n\n\n  11 |\n  12 |   test('should display filter bar with search input', async ({ page }) => {\n> 13 |     await expect(page.locator('#filter-bar').or(page.locator('#search-input'))).toBeVisible();\n     |                                                                                 ^\n  14 |   });\n  15 |\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:13:81"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 2,
+                          "startTime": "2026-05-12T09:14:25.104Z",
+                          "annotations": [],
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--c0b29-ilter-bar-with-search-input-chromium-retry2\\test-failed-1.png"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
+                            "column": 81,
+                            "line": 13
+                          }
                         }
                       ],
-                      "status": "expected"
+                      "status": "unexpected"
                     }
                   ],
                   "id": "a7b5313722e1686b4d4f-f646e519e463d837ae26",
@@ -11005,93 +11168,83 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 3,
+                          "workerIndex": 6,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5423,
+                          "duration": 5359,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31",
                             "location": {
                               "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                               "column": 31,
-                              "line": 19
+                              "line": 18
                             },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                            "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                                 "column": 31,
-                                "line": 19
+                                "line": 18
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n  17 |     const searchInput = page.locator('#search-input');\n  18 |     await expect(searchInput).toBeVisible();\n> 19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n     |                               ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n  17 |     const searchInput = page.locator('#search-input');\n> 18 |     await expect(searchInput).toBeVisible();\n     |                               ^\n  19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n  20 |   });\n  21 | });\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-03-12T11:21:51.916Z",
+                          "startTime": "2026-05-12T09:14:32.512Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium\\error-context.md"
                             }
                           ],
                           "errorLocation": {
                             "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                             "column": 31,
-                            "line": 19
+                            "line": 18
                           }
                         },
                         {
-                          "workerIndex": 4,
+                          "workerIndex": 7,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5657,
+                          "duration": 5477,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31",
                             "location": {
                               "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                               "column": 31,
-                              "line": 19
+                              "line": 18
                             },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                            "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                                 "column": 31,
-                                "line": 19
+                                "line": 18
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n  17 |     const searchInput = page.locator('#search-input');\n  18 |     await expect(searchInput).toBeVisible();\n> 19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n     |                               ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n  17 |     const searchInput = page.locator('#search-input');\n> 18 |     await expect(searchInput).toBeVisible();\n     |                               ^\n  19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n  20 |   });\n  21 | });\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 1,
-                          "startTime": "2026-03-12T11:21:59.573Z",
+                          "startTime": "2026-05-12T09:14:40.055Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium-retry1\\error-context.md"
                             },
                             {
                               "name": "trace",
@@ -11102,55 +11255,50 @@
                           "errorLocation": {
                             "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                             "column": 31,
-                            "line": 19
+                            "line": 18
                           }
                         },
                         {
-                          "workerIndex": 5,
+                          "workerIndex": 8,
                           "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 5485,
+                          "duration": 5366,
                           "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31",
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31",
                             "location": {
                               "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                               "column": 31,
-                              "line": 19
+                              "line": 18
                             },
-                            "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                            "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m   test(\u001b[32m'search input should exist and be visible'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 17 |\u001b[39m     \u001b[36mconst\u001b[39m searchInput \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(searchInput)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'text'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
                                 "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                                 "column": 31,
-                                "line": 19
+                                "line": 18
                               },
-                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#search-input')\nExpected: \u001b[32m\"text\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\u001b[2m    9 × locator resolved to <input id=\"search-input\"/>\u001b[22m\n\u001b[2m      - unexpected value \"null\"\u001b[22m\n\n\n  17 |     const searchInput = page.locator('#search-input');\n  18 |     await expect(searchInput).toBeVisible();\n> 19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n     |                               ^\n  20 |   });\n  21 | });\n  22 |\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:19:31"
+                              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#search-input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n  16 |   test('search input should exist and be visible', async ({ page }) => {\n  17 |     const searchInput = page.locator('#search-input');\n> 18 |     await expect(searchInput).toBeVisible();\n     |                               ^\n  19 |     await expect(searchInput).toHaveAttribute('type', 'text');\n  20 |   });\n  21 | });\n    at C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts:18:31"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 2,
-                          "startTime": "2026-03-12T11:22:07.656Z",
+                          "startTime": "2026-05-12T09:14:47.756Z",
                           "annotations": [],
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
                               "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium-retry2\\test-failed-1.png"
-                            },
-                            {
-                              "name": "error-context",
-                              "contentType": "text/markdown",
-                              "path": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\test-results\\challenge-23-Challenge-23--a3c5d-should-exist-and-be-visible-chromium-retry2\\error-context.md"
                             }
                           ],
                           "errorLocation": {
                             "file": "C:\\Users\\DELL\\Music\\challenge-engine-react\\courses\\01-react-fundamentals\\project\\tests\\e2e\\challenge-23.spec.ts",
                             "column": 31,
-                            "line": 19
+                            "line": 18
                           }
                         }
                       ],
@@ -11172,41 +11320,27 @@
     },
     "aiReviewResults": {
       "challengeId": "23-useref-focus-management",
-      "timestamp": "2026-03-12T11:22:13.817Z",
-      "score": 88,
+      "timestamp": "2026-05-12T09:14:53.957Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
-        "The code is well-documented with clear and concise comments."
-      ],
-      "improvements": [
-        "The `useEffect` hook in `FilterBar.tsx` is not necessary as the `ref` is already attached to the input element. Instead, use the `useRef` hook to create a ref and then use the `focus` method on the ref in the `useEffect` hook.",
-        "In `TaskApp.tsx`, the `useEffect` hook is used to update the `tasks` state when the component mounts. However, this can be optimized by using the `useCallback` hook to memoize the `dispatch` function and then use the `useEffect` hook with an empty dependency array.",
-        "In `TaskApp.tsx`, the `useMemo` hook is used to calculate the `filteredAndSortedTasks` array. However, this can be optimized by using the `useCallback` hook to memoize the `filteredAndSortedTasks` function and then use the `useMemo` hook with an empty dependency array."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, but there are some areas for improvement to optimize performance and reduce unnecessary re-renders. With some minor adjustments, the code can be even more efficient and scalable."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     },
     "aiResults": {
       "challengeId": "23-useref-focus-management",
-      "timestamp": "2026-03-12T11:22:13.817Z",
-      "score": 88,
+      "timestamp": "2026-05-12T09:14:53.957Z",
+      "score": 0,
       "feedback": [],
-      "strengths": [
-        "The code is well-structured and follows a consistent naming convention.",
-        "The use of TypeScript and functional components makes the code more maintainable and efficient.",
-        "The code is well-documented with clear and concise comments."
-      ],
-      "improvements": [
-        "The `useEffect` hook in `FilterBar.tsx` is not necessary as the `ref` is already attached to the input element. Instead, use the `useRef` hook to create a ref and then use the `focus` method on the ref in the `useEffect` hook.",
-        "In `TaskApp.tsx`, the `useEffect` hook is used to update the `tasks` state when the component mounts. However, this can be optimized by using the `useCallback` hook to memoize the `dispatch` function and then use the `useEffect` hook with an empty dependency array.",
-        "In `TaskApp.tsx`, the `useMemo` hook is used to calculate the `filteredAndSortedTasks` array. However, this can be optimized by using the `useCallback` hook to memoize the `filteredAndSortedTasks` function and then use the `useMemo` hook with an empty dependency array."
-      ],
-      "readability": 85,
-      "maintainability": 90,
-      "overall": "The code is well-structured and maintainable, but there are some areas for improvement to optimize performance and reduce unnecessary re-renders. With some minor adjustments, the code can be even more efficient and scalable."
+      "strengths": [],
+      "improvements": [],
+      "readability": 0,
+      "maintainability": 0,
+      "overall": "",
+      "error": "GROQ_API_KEY environment variable not set. AI review skipped."
     }
   }
 ]
